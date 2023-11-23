@@ -2,7 +2,9 @@ import {
   Menu as MenuIcon,
   ChevronRight as ChevronRightIcon,
 } from "@mui/icons-material";
-import { AppBar, IconButton, Toolbar } from "@mui/material";
+import { AppBar, Grid, IconButton, Toolbar, Typography } from "@mui/material";
+import PopUpTopbar from "./PopUpTopbar/PopUpTopbar";
+import ThemeMode from "./components/ThemeMode/ThemeMode";
 
 interface TopbarProps {
   windowWidth: number;
@@ -19,7 +21,6 @@ const Topbar = ({
   closeDrawer,
   open,
 }: TopbarProps) => {
-
   const currentBreakpoint = useGetCurrentBreakpoint(windowWidth);
 
   return (
@@ -53,10 +54,10 @@ const Topbar = ({
             currentBreakpoint == "xs" ||
             currentBreakpoint == "sm" ||
             currentBreakpoint == "md"
-            ? openDrawer()
-            : open
-            ? closeDrawer()
-            : openDrawer();
+              ? openDrawer()
+              : open
+              ? closeDrawer()
+              : openDrawer();
           }}
           sx={{
             justifyContent: "start",
@@ -75,6 +76,16 @@ const Topbar = ({
             />
           )}
         </IconButton>
+        <Grid sx={{width: "100%", justifyItems: "start", display:"flex", ml: 3}}>
+          <Typography fontWeight={500} fontSize={currentBreakpoint == "xs" ||
+          currentBreakpoint == "sm"?25:42} sx={{fontFamily: "'Montserrat Subrayada', sans-serif"}}>
+              Multigames App
+          </Typography>
+        </Grid>
+        <Grid display="flex">
+          <ThemeMode />
+          <PopUpTopbar />
+        </Grid>
       </Toolbar>
     </AppBar>
   );

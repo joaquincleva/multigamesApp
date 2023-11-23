@@ -1,0 +1,5 @@
+.navLink.active,
+.navLink:hover {
+  color: #f27649 !important;
+  transition: 0.2s;
+}

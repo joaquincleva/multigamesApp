@@ -3,11 +3,9 @@ import ResponsiveDrawer from "../Drawer/ResponsiveDrawer";
 
 function Layout() {
   return (
-    <>
       <ResponsiveDrawer>
         <Outlet />
       </ResponsiveDrawer>
-    </>
   );
 }
 

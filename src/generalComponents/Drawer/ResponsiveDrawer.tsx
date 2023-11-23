@@ -1,4 +1,4 @@
-import { Box, CssBaseline, Drawer, Toolbar } from "@mui/material";
+import { Box, CssBaseline, Drawer, Grid, Toolbar } from "@mui/material";
 import { useState, useEffect } from "react";
 import React from "react";
 import { useTheme } from "@mui/material";
@@ -53,7 +53,7 @@ const ResponsiveDrawer = ({ children }: ResponsiveDrawerProps) => {
   });
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", backgroundColor: "lime", width: "100%", height: "100% !important" }}>
       <CssBaseline />
       <Topbar
         {...{
@@ -82,6 +82,9 @@ const ResponsiveDrawer = ({ children }: ResponsiveDrawerProps) => {
           onClose={closeDrawer}
           ModalProps={{ keepMounted: true }}
           sx={{
+            boxSizing: "border-box",
+            borderRight: "0px solid",
+            transition: "5s",
             display: { xs: "block" },
             "& .MuiDrawer-paper": {
               width:
@@ -96,7 +99,7 @@ const ResponsiveDrawer = ({ children }: ResponsiveDrawerProps) => {
           <ContentDrawer {... {useGetCurrentBreakpoint, windowWidth, open}}/>
         </Drawer>
       </Box>
-      <Box component="main" flexGrow={1} p={3}>
+      <Box component="main" flexGrow={1} p={0} sx={{width: "100vw !important", height: "85vh !important"}}>
         <Toolbar/>
         {children}
       </Box>
