@@ -1,0 +1,1566 @@
+{
+  "englishData": [
+    [
+      {
+        "apple": {
+          "definition": "A round fruit with red or green skin and a whitish interior.",
+          "synonyms": ["fruit", "pomaceous fruit"],
+          "antonyms": ["orange", "banana"]
+        }
+      },
+      {
+        "animal": {
+          "definition": "A living organism that feeds on organic matter, typically having specialized sense organs and nervous systems.",
+          "synonyms": ["creature", "beast"],
+          "antonyms": ["plant", "inanimate object"]
+        }
+      },
+      {
+        "anchor": {
+          "definition": "A heavy object attached to a rope or chain and used to moor a ship to the sea bottom.",
+          "synonyms": ["mooring", "ground tackle"],
+          "antonyms": ["sail", "drift"]
+        }
+      },
+      {
+        "adventure": {
+          "definition": "An exciting or unusual experience, often involving danger and unknown risks.",
+          "synonyms": ["expedition", "journey"],
+          "antonyms": ["routine", "monotony"]
+        }
+      }
+    ],
+    [
+      {
+        "ball": {
+          "definition": "A round object used in various sports and games.",
+          "synonyms": ["sphere", "orb"],
+          "antonyms": ["cube", "pyramid"]
+        }
+      },
+      {
+        "book": {
+          "definition": "A set of written or printed pages fastened together within a cover.",
+          "synonyms": ["volume", "publication"],
+          "antonyms": ["e-book", "tablet"]
+        }
+      },
+      {
+        "blue": {
+          "definition": "Having a color similar to that of a clear sky or a ripe blueberry.",
+          "synonyms": ["azure", "cobalt"],
+          "antonyms": ["red", "yellow"]
+        }
+      },
+      {
+        "beautiful": {
+          "definition": "Pleasing the senses or mind aesthetically.",
+          "synonyms": ["attractive", "gorgeous"],
+          "antonyms": ["ugly", "unattractive"]
+        }
+      }
+    ],
+    [
+      {
+        "cat": {
+          "definition": "A small domesticated carnivorous mammal known for catching mice.",
+          "synonyms": ["feline", "kitty"],
+          "antonyms": ["dog", "canine"]
+        }
+      },
+      {
+        "car": {
+          "definition": "A four-wheeled motor vehicle used for transportation.",
+          "synonyms": ["automobile", "vehicle"],
+          "antonyms": ["bicycle", "pedestrian"]
+        }
+      },
+      {
+        "cloud": {
+          "definition": "A visible mass of water droplets or ice crystals suspended in the air.",
+          "synonyms": ["cumulus", "vapor"],
+          "antonyms": ["clear sky", "sunshine"]
+        }
+      },
+      {
+        "chocolate": {
+          "definition": "A sweet food made from roasted and ground cacao seeds.",
+          "synonyms": ["cocoa", "sweet"],
+          "antonyms": ["bitter", "unsweetened"]
+        }
+      }
+    ],
+    [
+      {
+        "dog": {
+          "definition": "A domesticated carnivorous mammal, commonly kept as a pet and known for its loyalty.",
+          "synonyms": ["canine", "pooch"],
+          "antonyms": ["cat", "feline"]
+        }
+      },
+      {
+        "door": {
+          "definition": "A movable barrier used to open and close an entrance to a building or room.",
+          "synonyms": ["gateway", "entrance"],
+          "antonyms": ["wall", "barrier"]
+        }
+      },
+      {
+        "day": {
+          "definition": "The time between sunrise and sunset; a 24-hour period.",
+          "synonyms": ["daylight", "sunlight"],
+          "antonyms": ["night", "darkness"]
+        }
+      },
+      {
+        "dream": {
+          "definition": "A series of thoughts, images, and emotions occurring during sleep.",
+          "synonyms": ["fantasy", "vision"],
+          "antonyms": ["reality", "awake"]
+        }
+      }
+    ],
+    [
+      {
+        "elephant": {
+          "definition": "A large herbivorous mammal with a long trunk and tusks, native to Africa and Asia.",
+          "synonyms": ["pachyderm", "tusker"],
+          "antonyms": ["mouse", "rodent"]
+        }
+      },
+      {
+        "energy": {
+          "definition": "The capacity to do work or the strength and vitality required for sustained physical or mental activity.",
+          "synonyms": ["vigor", "vitality"],
+          "antonyms": ["fatigue", "lethargy"]
+        }
+      },
+      {
+        "explore": {
+          "definition": "To travel in or through an unfamiliar area in order to learn about it.",
+          "synonyms": ["discover", "investigate"],
+          "antonyms": ["avoid", "ignore"]
+        }
+      },
+      {
+        "enjoy": {
+          "definition": "To take pleasure in or experience with satisfaction.",
+          "synonyms": ["savor", "relish"],
+          "antonyms": ["dislike", "abhor"]
+        }
+      }
+    ],
+    [
+      {
+        "flower": {
+          "definition": "The reproductive part of a plant, often with colorful petals.",
+          "synonyms": ["blossom", "bloom"],
+          "antonyms": ["weed", "thorn"]
+        }
+      },
+      {
+        "friend": {
+          "definition": "A person whom one knows and has a bond of mutual affection with.",
+          "synonyms": ["companion", "buddy"],
+          "antonyms": ["enemy", "foe"]
+        }
+      },
+      {
+        "family": {
+          "definition": "A group consisting of parents and their children, living together as a unit.",
+          "synonyms": ["relatives", "kin"],
+          "antonyms": ["strangers", "outsiders"]
+        }
+      },
+      {
+        "food": {
+          "definition": "Any nutritious substance that people or animals eat or drink to sustain life.",
+          "synonyms": ["nourishment", "fare"],
+          "antonyms": ["starvation", "fasting"]
+        }
+      }
+    ],
+    [
+      {
+        "green": {
+          "definition": "Having the color of growing foliage, as well as representing environmental awareness.",
+          "synonyms": ["emerald", "verdant"],
+          "antonyms": ["red", "brown"]
+        }
+      },
+      {
+        "garden": {
+          "definition": "A piece of ground cultivated with flowers, vegetables, or fruits.",
+          "synonyms": ["yard", "horticulture"],
+          "antonyms": ["concrete jungle", "desert"]
+        }
+      },
+      {
+        "guitar": {
+          "definition": "A musical instrument with six strings played by plucking or strumming.",
+          "synonyms": ["acoustic", "instrument"],
+          "antonyms": ["drums", "piano"]
+        }
+      },
+      {
+        "good": {
+          "definition": "Morally right, beneficial, or pleasant.",
+          "synonyms": ["virtuous", "positive"],
+          "antonyms": ["bad", "evil"]
+        }
+      }
+    ],
+    [
+      {
+        "heart": {
+          "definition": "The organ in the chest that pumps blood throughout the circulatory system.",
+          "synonyms": ["cardiovascular organ", "ticker"],
+          "antonyms": ["brain", "liver"]
+        }
+      },
+      {
+        "happy": {
+          "definition": "Feeling or showing pleasure, contentment, or joy.",
+          "synonyms": ["joyful", "content"],
+          "antonyms": ["sad", "unhappy"]
+        }
+      },
+      {
+        "home": {
+          "definition": "A place where one lives, typically with family or as part of a community.",
+          "synonyms": ["residence", "dwelling"],
+          "antonyms": ["away", "foreign"]
+        }
+      },
+      {
+        "hope": {
+          "definition": "A feeling of expectation and desire for a certain thing to happen.",
+          "synonyms": ["optimism", "confidence"],
+          "antonyms": ["despair", "hopelessness"]
+        }
+      }
+    ],
+    [
+      {
+        "island": {
+          "definition": "A landmass smaller than a continent and surrounded by water.",
+          "synonyms": ["isle", "key"],
+          "antonyms": ["mainland", "continent"]
+        }
+      },
+      {
+        "idea": {
+          "definition": "A thought or suggestion forming the basis for a concept or plan.",
+          "synonyms": ["concept", "notion"],
+          "antonyms": ["confusion", "misunderstanding"]
+        }
+      },
+      {
+        "inspire": {
+          "definition": "To fill someone with the urge or ability to do or feel something.",
+          "synonyms": ["motivate", "encourage"],
+          "antonyms": ["discourage", "deter"]
+        }
+      },
+      {
+        "insect": {
+          "definition": "A small arthropod animal with six legs and typically one or two pairs of wings.",
+          "synonyms": ["bug", "creepy-crawly"],
+          "antonyms": ["mammal", "bird"]
+        }
+      }
+    ],
+    [
+      {
+        "joy": {
+          "definition": "A feeling of great pleasure and happiness.",
+          "synonyms": ["delight", "glee"],
+          "antonyms": ["sorrow", "misery"]
+        }
+      },
+      {
+        "journey": {
+          "definition": "An act of traveling from one place to another, typically taking a considerable amount of time.",
+          "synonyms": ["trip", "voyage"],
+          "antonyms": ["stay", "standstill"]
+        }
+      },
+      {
+        "jump": {
+          "definition": "To propel oneself quickly upward or a short distance off the ground.",
+          "synonyms": ["leap", "spring"],
+          "antonyms": ["fall", "descend"]
+        }
+      },
+      {
+        "jacket": {
+          "definition": "A short, lightweight outer garment typically worn for warmth or as a fashion item.",
+          "synonyms": ["coat", "blazer"],
+          "antonyms": ["shirt", "vest"]
+        }
+      }
+    ],
+    [
+      {
+        "key": {
+          "definition": "A small metal instrument used to open locks or operate a mechanism.",
+          "synonyms": ["lock opener", "code"],
+          "antonyms": ["barrier", "block"]
+        }
+      },
+      {
+        "kind": {
+          "definition": "Having a gentle and considerate nature.",
+          "synonyms": ["compassionate", "benevolent"],
+          "antonyms": ["cruel", "unkind"]
+        }
+      },
+      {
+        "kitchen": {
+          "definition": "A room or area where food is prepared and cooked.",
+          "synonyms": ["culinary space", "cookery"],
+          "antonyms": ["dining room", "living room"]
+        }
+      },
+      {
+        "knowledge": {
+          "definition": "Facts, information, and skills acquired through experience or education.",
+          "synonyms": ["wisdom", "understanding"],
+          "antonyms": ["ignorance", "unawareness"]
+        }
+      }
+    ],
+    [
+      {
+        "love": {
+          "definition": "An intense feeling of deep affection; a strong emotional attachment.",
+          "synonyms": ["affection", "devotion"],
+          "antonyms": ["hate", "disgust"]
+        }
+      },
+      {
+        "light": {
+          "definition": "The natural agent that stimulates sight and makes things visible.",
+          "synonyms": ["brightness", "illumination"],
+          "antonyms": ["darkness", "obscurity"]
+        }
+      },
+      {
+        "laugh": {
+          "definition": "To make the spontaneous sounds and movements of the face and body expressing amusement.",
+          "synonyms": ["chuckle", "giggle"],
+          "antonyms": ["cry", "frown"]
+        }
+      },
+      {
+        "listen": {
+          "definition": "To give attention with the ear; to hear attentively.",
+          "synonyms": ["hear", "attend"],
+          "antonyms": ["ignore", "disregard"]
+        }
+      }
+    ],
+    [
+      {
+        "moon": {
+          "definition": "The natural satellite of the Earth, visible chiefly at night by reflected light from the sun.",
+          "synonyms": ["lunar", "satellite"],
+          "antonyms": ["sun", "day"]
+        }
+      },
+      {
+        "music": {
+          "definition": "The art of arranging sounds in time to produce a composition with melody, harmony, rhythm, and timbre.",
+          "synonyms": ["melody", "tune"],
+          "antonyms": ["silence", "noise"]
+        }
+      },
+      {
+        "mountain": {
+          "definition": "A large landform that rises prominently above its surroundings, typically having a peak or summit.",
+          "synonyms": ["peak", "range"],
+          "antonyms": ["valley", "plain"]
+        }
+      },
+      {
+        "movie": {
+          "definition": "A motion picture; a film.",
+          "synonyms": ["film", "cinema"],
+          "antonyms": ["book", "novel"]
+        }
+      }
+    ],
+    [
+      {
+        "nose": {
+          "definition": "The prominent facial feature that extends above the mouth, used for breathing and smelling.",
+          "synonyms": ["snout", "sniffer"],
+          "antonyms": ["mouth", "chin"]
+        }
+      },
+      {
+        "night": {
+          "definition": "The period of darkness between sunset and sunrise.",
+          "synonyms": ["evening", "dark"],
+          "antonyms": ["day", "morning"]
+        }
+      },
+      {
+        "nature": {
+          "definition": "The phenomena of the physical world collectively, including plants, animals, and landscapes.",
+          "synonyms": ["environment", "creation"],
+          "antonyms": ["artificial", "unnatural"]
+        }
+      },
+      {
+        "note": {
+          "definition": "A brief record of facts, topics, or thoughts, usually used for reference or documentation.",
+          "synonyms": ["memorandum", "record"],
+          "antonyms": ["forget", "erase"]
+        }
+      }
+    ],
+    [
+      {
+        "ocean": {
+          "definition": "A vast expanse of saltwater that covers most of the Earth's surface.",
+          "synonyms": ["sea", "deep"],
+          "antonyms": ["land", "continent"]
+        }
+      },
+      {
+        "orange": {
+          "definition": "A citrus fruit with a tough bright orange rind and inner flesh divided into segments.",
+          "synonyms": ["citrus", "mandarin"],
+          "antonyms": ["apple", "banana"]
+        }
+      },
+      {
+        "owl": {
+          "definition": "A nocturnal bird of prey with large eyes, a facial disk, and a distinctively hooting call.",
+          "synonyms": ["night bird", "raptor"],
+          "antonyms": ["songbird", "sparrow"]
+        }
+      },
+      {
+        "opportunity": {
+          "definition": "A set of circumstances that makes it possible to do something.",
+          "synonyms": ["chance", "occasion"],
+          "antonyms": ["challenge", "obstacle"]
+        }
+      }
+    ],
+    [
+      {
+        "park": {
+          "definition": "A public area of land with grass and trees, usually set aside for recreation and relaxation.",
+          "synonyms": ["recreational area", "green space"],
+          "antonyms": ["concrete jungle", "urban sprawl"]
+        }
+      },
+      {
+        "pizza": {
+          "definition": "A dish consisting of a flattened dough topped with tomato sauce, cheese, and various toppings.",
+          "synonyms": ["pie", "slice"],
+          "antonyms": ["salad", "sandwich"]
+        }
+      },
+      {
+        "purple": {
+          "definition": "A color intermediate between red and blue.",
+          "synonyms": ["violet", "lavender"],
+          "antonyms": ["yellow", "green"]
+        }
+      },
+      {
+        "play": {
+          "definition": "Engaging in activities for enjoyment and recreation.",
+          "synonyms": ["recreation", "amusement"],
+          "antonyms": ["work", "seriousness"]
+        }
+      }
+    ],
+    [
+      {
+        "quiet": {
+          "definition": "Making little or no noise; characterized by an absence of disturbance or loudness.",
+          "synonyms": ["silent", "peaceful"],
+          "antonyms": ["loud", "noisy"]
+        }
+      },
+      {
+        "queen": {
+          "definition": "A female ruler of an independent state or territory.",
+          "synonyms": ["monarch", "sovereign"],
+          "antonyms": ["king", "subject"]
+        }
+      },
+      {
+        "quick": {
+          "definition": "Moving fast or doing something in a short amount of time.",
+          "synonyms": ["fast", "speedy"],
+          "antonyms": ["slow", "leisurely"]
+        }
+      },
+      {
+        "question": {
+          "definition": "A sentence worded or expressed so as to elicit information.",
+          "synonyms": ["inquiry", "query"],
+          "antonyms": ["answer", "solution"]
+        }
+      }
+    ],
+    [
+      {
+        "rainbow": {
+          "definition": "A meteorological phenomenon that is caused by reflection, refraction, and dispersion of light in water droplets resulting in a spectrum of light appearing in the sky.",
+          "synonyms": ["arc", "spectrum"],
+          "antonyms": ["monochrome", "colorless"]
+        }
+      },
+      {
+        "river": {
+          "definition": "A natural watercourse, typically freshwater, flowing towards an ocean, sea, lake, or another river.",
+          "synonyms": ["stream", "waterway"],
+          "antonyms": ["mountain", "desert"]
+        }
+      },
+      {
+        "red": {
+          "definition": "The color of blood or a ripe tomato, often associated with strong emotions.",
+          "synonyms": ["scarlet", "crimson"],
+          "antonyms": ["blue", "green"]
+        }
+      },
+      {
+        "run": {
+          "definition": "To move rapidly on foot; to participate in a race.",
+          "synonyms": ["jog", "sprint"],
+          "antonyms": ["walk", "crawl"]
+        }
+      }
+    ],
+    [
+      {
+        "sun": {
+          "definition": "The star at the center of our solar system, a source of light and heat for the Earth.",
+          "synonyms": ["star", "solar orb"],
+          "antonyms": ["moon", "darkness"]
+        }
+      },
+      {
+        "smile": {
+          "definition": "A facial expression characterized by turning up the corners of the mouth, often indicating happiness or amusement.",
+          "synonyms": ["grin", "beam"],
+          "antonyms": ["frown", "scowl"]
+        }
+      },
+      {
+        "star": {
+          "definition": "A celestial body that emits light and heat, often visible in the night sky.",
+          "synonyms": ["celestial object", "astral body"],
+          "antonyms": ["planet", "black hole"]
+        }
+      },
+      {
+        "summer": {
+          "definition": "The warmest season of the year, characterized by longer days and higher temperatures.",
+          "synonyms": ["summertime", "hot season"],
+          "antonyms": ["winter", "cold season"]
+        }
+      }
+    ],
+    [
+      {
+        "tree": {
+          "definition": "A woody perennial plant, typically with a single main stem or trunk, supporting branches and leaves.",
+          "synonyms": ["shrub", "flora"],
+          "antonyms": ["bush", "shrubbery"]
+        }
+      },
+      {
+        "table": {
+          "definition": "A piece of furniture with a flat horizontal surface, often supported by one or more legs.",
+          "synonyms": ["desk", "board"],
+          "antonyms": ["floor", "ground"]
+        }
+      },
+      {
+        "travel": {
+          "definition": "To go on a journey, typically over a considerable distance.",
+          "synonyms": ["journey", "explore"],
+          "antonyms": ["stay", "settle"]
+        }
+      },
+      {
+        "time": {
+          "definition": "The indefinite continued progress of existence and events in the past, present, and future.",
+          "synonyms": ["duration", "moment"],
+          "antonyms": ["eternity", "timelessness"]
+        }
+      }
+    ],
+    [
+      {
+        "umbrella": {
+          "definition": "A device consisting of a circular canopy of fabric or other material supported by a collapsible metal frame.",
+          "synonyms": ["parasol", "shade"],
+          "antonyms": ["raincoat", "downpour"]
+        }
+      },
+      {
+        "unicorn": {
+          "definition": "A mythical horse-like creature with a single, spiraled horn projecting from its forehead.",
+          "synonyms": ["mythical creature", "fantasy being"],
+          "antonyms": ["horse", "real"]
+        }
+      },
+      {
+        "universe": {
+          "definition": "All of space, time, matter, and energy, including the solar system, galaxies, and cosmic structures.",
+          "synonyms": ["cosmos", "creation"],
+          "antonyms": ["void", "nothingness"]
+        }
+      },
+      {
+        "up": {
+          "definition": "Moving or situated in a higher position, direction, or level.",
+          "synonyms": ["elevated", "upward"],
+          "antonyms": ["down", "lower"]
+        }
+      }
+    ],
+    [
+      {
+        "vacation": {
+          "definition": "A period of time devoted to pleasure, rest, or relaxation, typically with a break from work or school.",
+          "synonyms": ["holiday", "getaway"],
+          "antonyms": ["work", "routine"]
+        }
+      },
+      {
+        "violet": {
+          "definition": "A color that is a bluish-purple to reddish-purple in hue.",
+          "synonyms": ["purple", "lilac"],
+          "antonyms": ["yellow", "green"]
+        }
+      },
+      {
+        "volunteer": {
+          "definition": "A person who freely offers to take part in an enterprise or undertake a task, often without financial compensation.",
+          "synonyms": ["helper", "contributor"],
+          "antonyms": ["paid worker", "employee"]
+        }
+      },
+      {
+        "view": {
+          "definition": "The ability to see or observe, typically from a particular standpoint.",
+          "synonyms": ["perspective", "outlook"],
+          "antonyms": ["blindness", "ignorance"]
+        }
+      }
+    ],
+    [
+      {
+        "water": {
+          "definition": "A transparent, odorless, tasteless liquid that forms the seas, lakes, rivers, and rain, and is the basis of the fluids of living organisms.",
+          "synonyms": ["H2O", "aquatic"],
+          "antonyms": ["fire", "earth"]
+        }
+      },
+      {
+        "wave": {
+          "definition": "A disturbance that travels through space and time, often characterized by an oscillation or vibration.",
+          "synonyms": ["ripple", "undulation"],
+          "antonyms": ["stillness", "calm"]
+        }
+      },
+      {
+        "wind": {
+          "definition": "The natural movement of the air, especially in the form of a current of air blowing from a particular direction.",
+          "synonyms": ["breeze", "gust"],
+          "antonyms": ["calm", "stillness"]
+        }
+      },
+      {
+        "wonderful": {
+          "definition": "Inspiring delight, pleasure, or admiration; extremely good.",
+          "synonyms": ["amazing", "fantastic"],
+          "antonyms": ["awful", "terrible"]
+        }
+      }
+    ],
+    [
+      {
+        "xylophone": {
+          "definition": "A musical instrument consisting of a set of wooden bars of different lengths, which are played by being struck with mallets.",
+          "synonyms": ["percussion instrument", "marimba"],
+          "antonyms": ["silence", "quiet"]
+        }
+      },
+      {
+        "xenon": {
+          "definition": "A chemical element (symbol Xe) with the atomic number 54, a colorless, dense, odorless noble gas.",
+          "synonyms": ["noble gas", "element"],
+          "antonyms": ["metal", "compound"]
+        }
+      },
+      {
+        "xylograph": {
+          "definition": "A print made from a wood engraving.",
+          "synonyms": ["woodcut", "engraving"],
+          "antonyms": ["painting", "drawing"]
+        }
+      },
+      {
+        "xenophobia": {
+          "definition": "Dislike or prejudice against people from other countries.",
+          "synonyms": ["anti-foreign sentiment", "nationalism"],
+          "antonyms": ["open-mindedness", "tolerance"]
+        }
+      }
+    ],
+    [
+      {
+        "yellow": {
+          "definition": "The color of ripe lemons, egg yolks, and sunflowers, occurring between green and orange in the spectrum.",
+          "synonyms": ["gold", "amber"],
+          "antonyms": ["blue", "purple"]
+        }
+      },
+      {
+        "year": {
+          "definition": "The time taken by a planet to make one revolution around the sun.",
+          "synonyms": ["12 months", "annual"],
+          "antonyms": ["day", "hour"]
+        }
+      },
+      {
+        "yummy": {
+          "definition": "Delicious, tasty, or pleasing to the palate.",
+          "synonyms": ["delightful", "scrumptious"],
+          "antonyms": ["disgusting", "unappetizing"]
+        }
+      },
+      {
+        "yoga": {
+          "definition": "A physical, mental, and spiritual practice that originated in ancient India.",
+          "synonyms": ["meditation", "stretching"],
+          "antonyms": ["inactivity", "stiffness"]
+        }
+      }
+    ],
+    [
+      {
+        "zoo": {
+          "definition": "A facility where animals are kept and displayed to the public.",
+          "synonyms": ["animal park", "menagerie"],
+          "antonyms": ["wilderness", "natural habitat"]
+        }
+      },
+      {
+        "zigzag": {
+          "definition": "A pattern or path characterized by sharp turns in alternating directions.",
+          "synonyms": ["crisscross", "winding"],
+          "antonyms": ["straight", "direct"]
+        }
+      },
+      {
+        "zen": {
+          "definition": "A school of Mahayana Buddhism that emphasizes the value of meditation and intuition.",
+          "synonyms": ["meditation", "mindfulness"],
+          "antonyms": ["chaos", "distraction"]
+        }
+      },
+      {
+        "zephyr": {
+          "definition": "A gentle, mild breeze.",
+          "synonyms": ["gentle wind", "whisper"],
+          "antonyms": ["gale", "storm"]
+        }
+      }
+    ]
+  ],
+  "spanishData": [
+    [
+      {
+        "agua": {
+          "definition": "Sustancia líquida transparente, inodora e insípida que forma mares, ríos, lagos y lluvia, y es la base de los fluidos de los organismos vivos.",
+          "synonyms": ["líquido", "H2O"],
+          "antonyms": ["fuego", "tierra"]
+        }
+      },
+      {
+        "amor": {
+          "definition": "Sentimiento intenso de afecto y apego hacia alguien o algo.",
+          "synonyms": ["afecto", "devoción"],
+          "antonyms": ["odio", "repulsión"]
+        }
+      },
+      {
+        "aire": {
+          "definition": "Mezcla gaseosa que forma la atmósfera terrestre y es esencial para la respiración de los seres vivos.",
+          "synonyms": ["viento", "brisa"],
+          "antonyms": ["calma", "quietud"]
+        }
+      },
+      {
+        "arte": {
+          "definition": "Manifestación de la creatividad y la imaginación humana, generalmente en forma visual o auditiva, que busca expresar una idea estética o emotiva.",
+          "synonyms": ["creación", "expresión"],
+          "antonyms": ["monotonía", "simplicidad"]
+        }
+      }
+    ],
+    [
+      {
+        "boca": {
+          "definition": "Abertura en la cabeza de los vertebrados que se utiliza para comer y hablar.",
+          "synonyms": ["orificio", "abertura"],
+          "antonyms": ["oído", "nariz"]
+        }
+      },
+      {
+        "beso": {
+          "definition": "Contacto de los labios como expresión de afecto, amor o saludo.",
+          "synonyms": ["caricia", "muestra de afecto"],
+          "antonyms": ["golpe", "agresión"]
+        }
+      },
+      {
+        "brisa": {
+          "definition": "Viento suave y agradable.",
+          "synonyms": ["viento ligero", "aires suaves"],
+          "antonyms": ["tormenta", "vendaval"]
+        }
+      },
+      {
+        "bola": {
+          "definition": "Objeto redondo utilizado en varios deportes y juegos.",
+          "synonyms": ["esfera", "pelota"],
+          "antonyms": ["cubo", "pirámide"]
+        }
+      }
+    ],
+    [
+      {
+        "casa": {
+          "definition": "Edificación o construcción para habitar, que proporciona refugio y comodidad.",
+          "synonyms": ["hogar", "residencia"],
+          "antonyms": ["afuera", "extranjero"]
+        }
+      },
+      {
+        "cielo": {
+          "definition": "Región del espacio que se encuentra sobre la Tierra, donde aparecen el sol, la luna y las estrellas.",
+          "synonyms": ["firmamento", "espacio celestial"],
+          "antonyms": ["tierra", "suelo"]
+        }
+      },
+      {
+        "cima": {
+          "definition": "Punto más alto de una montaña o colina.",
+          "synonyms": ["cumbre", "pico"],
+          "antonyms": ["valle", "llanura"]
+        }
+      },
+      {
+        "coco": {
+          "definition": "Fruto del cocotero, con cáscara dura y pulpa comestible.",
+          "synonyms": ["nuez de coco", "fruta tropical"],
+          "antonyms": ["manzana", "uva"]
+        }
+      }
+    ],
+    [
+      {
+        "día": {
+          "definition": "Periodo de tiempo que comprende las horas de luz solar.",
+          "synonyms": ["jornada", "claridad"],
+          "antonyms": ["noche", "oscuridad"]
+        }
+      },
+      {
+        "dado": {
+          "definition": "Pequeño objeto cúbico utilizado en juegos de azar.",
+          "synonyms": ["cubilete", "pieza de juego"],
+          "antonyms": ["carta", "ficha"]
+        }
+      },
+      {
+        "duna": {
+          "definition": "Colina de arena formada por el viento en áreas desérticas o costeras.",
+          "synonyms": ["elevación de arena", "montecillo"],
+          "antonyms": ["valle", "llanura"]
+        }
+      },
+      {
+        "dado": {
+          "definition": "Participio del verbo dar.",
+          "synonyms": ["entregado", "concedido"],
+          "antonyms": ["recibido", "negado"]
+        }
+      }
+    ],
+    [
+      {
+        "elefante": {
+          "definition": "Mamífero herbívoro de gran tamaño, con trompa y colmillos, nativo de África y Asia.",
+          "synonyms": ["paquidermo", "tusker"],
+          "antonyms": ["ratón", "roedor"]
+        }
+      },
+      {
+        "energía": {
+          "definition": "Capacidad para realizar trabajo o la fuerza y vitalidad requeridas para una actividad física o mental sostenida.",
+          "synonyms": ["vigor", "vitalidad"],
+          "antonyms": ["fatiga", "letargo"]
+        }
+      },
+      {
+        "escoba": {
+          "definition": "Instrumento con cerdas utilizado para barrer y limpiar suelos.",
+          "synonyms": ["cepillo", "instrumento de limpieza"],
+          "antonyms": ["recogedor", "aspiradora"]
+        }
+      },
+      {
+        "espejo": {
+          "definition": "Superficie reflectante que devuelve la imagen de los objetos que la rodean.",
+          "synonyms": ["reflejo", "espejismo"],
+          "antonyms": ["opacidad", "oscuridad"]
+        }
+      }
+    ],
+    [
+      {
+        "flor": {
+          "definition": "Órgano reproductor de una planta, a menudo con pétalos coloridos.",
+          "synonyms": ["brote", "blossom"],
+          "antonyms": ["maleza", "espina"]
+        }
+      },
+      {
+        "familia": {
+          "definition": "Grupo que consta de padres e hijos que viven juntos como unidad doméstica.",
+          "synonyms": ["hogar", "parentela"],
+          "antonyms": ["extraños", "desconocidos"]
+        }
+      },
+      {
+        "fuego": {
+          "definition": "Proceso de combustión que desprende calor y luz.",
+          "synonyms": ["llama", "incendio"],
+          "antonyms": ["agua", "hielo"]
+        }
+      },
+      {
+        "fruta": {
+          "definition": "Órgano vegetal maduro que contiene las semillas de una planta.",
+          "synonyms": ["cosecha", "producto natural"],
+          "antonyms": ["verdura", "hortaliza"]
+        }
+      }
+    ],
+    [
+      {
+        "gato": {
+          "definition": "Animal mamífero doméstico de pequeño tamaño, carnívoro y de pelaje suave.",
+          "synonyms": ["minino", "felino"],
+          "antonyms": ["perro", "canino"]
+        }
+      },
+      {
+        "globo": {
+          "definition": "Objeto inflado con aire o gas, generalmente utilizado como decoración o juguete.",
+          "synonyms": ["esfera inflada", "aerostato"],
+          "antonyms": ["plano", "superficie sólida"]
+        }
+      },
+      {
+        "granja": {
+          "definition": "Terreno cultivado y explotado para la producción agrícola o ganadera.",
+          "synonyms": ["finca", "hacienda"],
+          "antonyms": ["ciudad", "urbano"]
+        }
+      },
+      {
+        "gema": {
+          "definition": "Mineral precioso y transparente, generalmente cortado y pulido para la fabricación de joyas.",
+          "synonyms": ["joya", "piedra preciosa"],
+          "antonyms": ["roca", "mineral opaco"]
+        }
+      }
+    ],
+    [
+      {
+        "hoja": {
+          "definition": "Órgano plano y verde de las plantas, generalmente expuesto a la luz solar y utilizado para la fotosíntesis.",
+          "synonyms": ["follaje", "pámpano"],
+          "antonyms": ["raíz", "tronco"]
+        }
+      },
+      {
+        "hielo": {
+          "definition": "Agua en estado sólido, generalmente cristalino y frío.",
+          "synonyms": ["helada", "congelación"],
+          "antonyms": ["fuego", "calor"]
+        }
+      },
+      {
+        "huevo": {
+          "definition": "Cuerpo redondeado que contiene la célula reproductiva de un animal, generalmente comestible.",
+          "synonyms": ["ovocito", "cascarón"],
+          "antonyms": ["pollo", "gallina"]
+        }
+      },
+      {
+        "hoja": {
+          "definition": "Parte de un libro o cuaderno que se encuentra en el interior y contiene información impresa.",
+          "synonyms": ["página", "folleto"],
+          "antonyms": ["portada", "contraportada"]
+        }
+      }
+    ],
+    [
+      {
+        "isla": {
+          "definition": "Porción de tierra rodeada de agua por todos lados.",
+          "synonyms": ["cayo", "islote"],
+          "antonyms": ["continente", "tierra firme"]
+        }
+      },
+      {
+        "invierno": {
+          "definition": "Estación del año que se caracteriza por temperaturas frías, días cortos y noches largas.",
+          "synonyms": ["estación fría", "temporada invernal"],
+          "antonyms": ["verano", "estío"]
+        }
+      },
+      {
+        "ilusión": {
+          "definition": "Percepción engañosa o imagen falsa que se percibe de manera errónea.",
+          "synonyms": ["engañosa", "quimera"],
+          "antonyms": ["realidad", "certeza"]
+        }
+      },
+      {
+        "iglesia": {
+          "definition": "Edificio destinado al culto religioso, especialmente en la tradición cristiana.",
+          "synonyms": ["templo", "catedral"],
+          "antonyms": ["teatro", "estadio"]
+        }
+      }
+    ],
+    [
+      {
+        "jirafa": {
+          "definition": "Mamífero herbívoro de cuello largo y manchas irregulares en su pelaje, nativo de África.",
+          "synonyms": ["animal de cuello largo", "mamífero africano"],
+          "antonyms": ["serpiente", "reptil"]
+        }
+      },
+      {
+        "jardín": {
+          "definition": "Espacio exterior cultivado con plantas, flores y a menudo césped, utilizado con fines ornamentales.",
+          "synonyms": ["parque", "huerto"],
+          "antonyms": ["desierto", "asfalto"]
+        }
+      },
+      {
+        "jugo": {
+          "definition": "Líquido extraído de frutas y plantas, generalmente consumido como bebida.",
+          "synonyms": ["zumo", "néctar"],
+          "antonyms": ["sólido", "seco"]
+        }
+      },
+      {
+        "joroba": {
+          "definition": "Protuberancia en la espalda de algunos animales, como el camello, que almacena grasa o agua.",
+          "synonyms": ["jorobadura", "giba"],
+          "antonyms": ["espalda plana", "lomo recto"]
+        }
+      }
+    ],
+    [
+      {
+        "kiwi": {
+          "definition": "Fruta de pulpa verde y textura agridulce.",
+          "synonyms": ["fruta exótica"],
+          "antonyms": ["manzana", "pera"]
+        }
+      },
+      {
+        "kiosco": {
+          "definition": "Pequeña construcción donde se venden periódicos, revistas y otros productos.",
+          "synonyms": ["puesto", "quiosco"],
+          "antonyms": ["almacén", "supermercado"]
+        }
+      },
+      {
+        "karate": {
+          "definition": "Arte marcial originario de Japón.",
+          "synonyms": ["artes marciales", "defensa personal"],
+          "antonyms": ["ballet", "gimnasia rítmica"]
+        }
+      },
+      {
+        "kétchup": {
+          "definition": "Salsa condimentada a base de tomate.",
+          "synonyms": ["salsa de tomate", "catsup"],
+          "antonyms": ["mostaza", "mayonesa"]
+        }
+      }
+    ],
+    [
+      {
+        "luz": {
+          "definition": "Radiación electromagnética que es visible y que permite la visión.",
+          "synonyms": ["iluminación", "claridad"],
+          "antonyms": ["oscuridad", "tinieblas"]
+        }
+      },
+      {
+        "lápiz": {
+          "definition": "Instrumento de escritura o dibujo con una mina delgada de grafito o una sustancia similar.",
+          "synonyms": ["lapicero", "grafito"],
+          "antonyms": ["pluma", "pincel"]
+        }
+      },
+      {
+        "lago": {
+          "definition": "Gran masa de agua rodeada de tierra.",
+          "synonyms": ["laguna", "embalse"],
+          "antonyms": ["montaña", "valle"]
+        }
+      },
+      {
+        "luna": {
+          "definition": "Satélite natural de la Tierra, visible principalmente por la luz reflejada del sol durante la noche.",
+          "synonyms": ["satélite", "astro"],
+          "antonyms": ["sol", "día"]
+        }
+      }
+    ],
+    [
+      {
+        "mar": {
+          "definition": "Extensión de agua salada que cubre la mayor parte de la superficie terrestre.",
+          "synonyms": ["océano", "agua salada"],
+          "antonyms": ["tierra", "continente"]
+        }
+      },
+      {
+        "montaña": {
+          "definition": "Elevación natural y prominente de la tierra, generalmente más alta que una colina.",
+          "synonyms": ["cima", "sierra"],
+          "antonyms": ["valle", "llanura"]
+        }
+      },
+      {
+        "musica": {
+          "definition": "Arte de organizar sonidos de manera armoniosa y expresiva.",
+          "synonyms": ["melodía", "sonoridad"],
+          "antonyms": ["silencio", "ruido"]
+        }
+      },
+      {
+        "mesa": {
+          "definition": "Mueble con una superficie plana, generalmente con patas, utilizado para colocar objetos.",
+          "synonyms": ["tablero", "escritorio"],
+          "antonyms": ["suelo", "tierra"]
+        }
+      }
+    ],
+    [
+      {
+        "nube": {
+          "definition": "Masa visible de gotas de agua suspendidas en la atmósfera.",
+          "synonyms": ["cumulus", "vapor"],
+          "antonyms": ["cielo despejado", "sol"]
+        }
+      },
+      {
+        "nieve": {
+          "definition": "Cristales de hielo congelado que caen de las nubes en forma de copos blancos.",
+          "synonyms": ["blanca", "helada"],
+          "antonyms": ["lluvia", "descongelada"]
+        }
+      },
+      {
+        "nariz": {
+          "definition": "Parte prominente del rostro humano que se utiliza para oler y respirar.",
+          "synonyms": ["hocico", "olfato"],
+          "antonyms": ["boca", "mentón"]
+        }
+      },
+      {
+        "noche": {
+          "definition": "Periodo de oscuridad entre el atardecer y el amanecer.",
+          "synonyms": ["anochecer", "obscuridad"],
+          "antonyms": ["día", "amanecer"]
+        }
+      }
+    ],
+    [
+      {
+        "oliva": {
+          "definition": "Fruto del olivo, de forma ovalada y color verde o negro, utilizado para producir aceite de oliva.",
+          "synonyms": ["aceituna", "fruto del olivo"],
+          "antonyms": ["fruta", "manzana"]
+        }
+      },
+      {
+        "oro": {
+          "definition": "Metal precioso de color amarillo brillante, utilizado en joyería y como forma de inversión.",
+          "synonyms": ["metal dorado", "valioso"],
+          "antonyms": ["plata", "cobre"]
+        }
+      },
+      {
+        "oso": {
+          "definition": "Animal mamífero de gran tamaño, generalmente cubierto de pelo y de naturaleza carnívora u omnívora.",
+          "synonyms": ["oso pardo", "animal peludo"],
+          "antonyms": ["conejo", "ardilla"]
+        }
+      },
+      {
+        "olla": {
+          "definition": "Recipiente de cocina con asas y tapa, utilizado para cocinar alimentos líquidos o sólidos.",
+          "synonyms": ["cazuela", "recipiente"],
+          "antonyms": ["sartén", "plato"]
+        }
+      }
+    ],
+    [
+      {
+        "piedra": {
+          "definition": "Sustancia sólida y dura que se encuentra en la superficie terrestre.",
+          "synonyms": ["roca", "mineral"],
+          "antonyms": ["agua", "aire"]
+        }
+      },
+      {
+        "papel": {
+          "definition": "Material fino elaborado a partir de pulpa de madera, utilizado para escribir, imprimir o empaquetar.",
+          "synonyms": ["documento", "hoja"],
+          "antonyms": ["plástico", "metal"]
+        }
+      },
+      {
+        "pato": {
+          "definition": "Ave acuática de pico ancho, patas palmeadas y plumaje impermeable.",
+          "synonyms": ["ave nadadora", "pato real"],
+          "antonyms": ["águila", "búho"]
+        }
+      },
+      {
+        "plaza": {
+          "definition": "Espacio público, generalmente rodeado de edificios, destinado al esparcimiento y encuentro social.",
+          "synonyms": ["parque", "plaza central"],
+          "antonyms": ["calle", "pasillo"]
+        }
+      }
+    ],
+    [
+      {
+        "queso": {
+          "definition": "Producto lácteo sólido obtenido por la coagulación de la leche y posterior fermentación.",
+          "synonyms": ["fromage", "lácteo"],
+          "antonyms": ["leche", "yogur"]
+        }
+      },
+      {
+        "quemar": {
+          "definition": "Hacer arder un objeto mediante fuego.",
+          "synonyms": ["incendiar", "calcinar"],
+          "antonyms": ["apagar", "enfriar"]
+        }
+      },
+      {
+        "quitar": {
+          "definition": "Eliminar o separar algo de su lugar o posición actual.",
+          "synonyms": ["remover", "despojar"],
+          "antonyms": ["colocar", "agregar"]
+        }
+      },
+      {
+        "quieto": {
+          "definition": "Sin movimiento o actividad.",
+          "synonyms": ["inmóvil", "tranquilo"],
+          "antonyms": ["activo", "agitado"]
+        }
+      }
+    ],
+    [
+      {
+        "rio": {
+          "definition": "Corriente natural de agua que fluye hacia un mar, lago u otro río.",
+          "synonyms": ["arroyo", "afluente"],
+          "antonyms": ["cascada", "charco"]
+        }
+      },
+      {
+        "rosa": {
+          "definition": "Flor de pétalos suaves y fragantes, generalmente de colores como el rojo, blanco o amarillo.",
+          "synonyms": ["flor", "rosal"],
+          "antonyms": ["cardo", "daga"]
+        }
+      },
+      {
+        "raton": {
+          "definition": "Pequeño mamífero roedor, generalmente de cola larga y pelaje suave.",
+          "synonyms": ["ratón de campo", "roedor"],
+          "antonyms": ["gato", "perro"]
+        }
+      },
+      {
+        "reloj": {
+          "definition": "Instrumento para medir el tiempo, generalmente llevado en la muñeca o colgado de una cadena.",
+          "synonyms": ["cronómetro", "reloj de pulsera"],
+          "antonyms": ["brújula", "calendario"]
+        }
+      }
+    ],
+    [
+      {
+        "sol": {
+          "definition": "Estrella que constituye el centro del sistema solar y proporciona luz y calor a la Tierra.",
+          "synonyms": ["astro rey", "luminaria"],
+          "antonyms": ["luna", "noche"]
+        }
+      },
+      {
+        "silla": {
+          "definition": "Asiento con respaldo, generalmente para una persona.",
+          "synonyms": ["butaca", "sillón"],
+          "antonyms": ["banco", "taburete"]
+        }
+      },
+      {
+        "sombrero": {
+          "definition": "Prenda de vestir que se lleva en la cabeza, generalmente con ala.",
+          "synonyms": ["gorro", "cachucha"],
+          "antonyms": ["capucha", "peluca"]
+        }
+      },
+      {
+        "sapo": {
+          "definition": "Anfibio anuro de piel áspera y verrugosa, que suele vivir cerca de fuentes de agua.",
+          "synonyms": ["rana", "batracio"],
+          "antonyms": ["lagarto", "serpiente"]
+        }
+      }
+    ],
+    [
+      {
+        "tierra": {
+          "definition": "Planeta en el que vivimos, junto con todos los seres vivos y elementos naturales que lo componen.",
+          "synonyms": ["planeta", "mundo"],
+          "antonyms": ["cielo", "espacio"]
+        }
+      },
+      {
+        "tren": {
+          "definition": "Vehículo de transporte formado por una serie de vagones que circulan sobre raíles.",
+          "synonyms": ["ferrocarril", "expreso"],
+          "antonyms": ["avión", "barco"]
+        }
+      },
+      {
+        "taza": {
+          "definition": "Recipiente con asa utilizado para beber líquidos, generalmente más pequeño que una taza.",
+          "synonyms": ["vaso", "copa"],
+          "antonyms": ["jarra", "botella"]
+        }
+      },
+      {
+        "trenza": {
+          "definition": "Conjunto de mechones de cabello entrelazados entre sí.",
+          "synonyms": ["entrelazado", "coleta"],
+          "antonyms": ["cabello suelto", "liso"]
+        }
+      }
+    ],
+    [
+      {
+        "uva": {
+          "definition": "Fruto de la vid, generalmente de forma redonda u ovalada, de piel fina y pulpa jugosa.",
+          "synonyms": ["racimo", "baya"],
+          "antonyms": ["pasas", "vino"]
+        }
+      },
+      {
+        "uña": {
+          "definition": "Placa córnea en la extremidad de los dedos de las manos y los pies en muchos vertebrados.",
+          "synonyms": ["garra", "clavo"],
+          "antonyms": ["pulgar", "dedo"]
+        }
+      },
+      {
+        "unicornio": {
+          "definition": "Criatura mitológica representada como un caballo con un solo cuerno en la frente.",
+          "synonyms": ["bestia mítica", "quimera"],
+          "antonyms": ["caballo", "rinoceronte"]
+        }
+      },
+      {
+        "uniforme": {
+          "definition": "Conjunto de prendas de vestir de un mismo diseño y color, utilizado como identificación o en ciertas profesiones.",
+          "synonyms": ["ropa igual", "vestimenta"],
+          "antonyms": ["ropa casual", "disfraz"]
+        }
+      }
+    ],
+    [
+      {
+        "vela": {
+          "definition": "Objeto formado por una mecha rodeada de cera, parafina u otro material, que al arder proporciona luz.",
+          "synonyms": ["candela", "luz"],
+          "antonyms": ["oscuridad", "apagado"]
+        }
+      },
+      {
+        "ventana": {
+          "definition": "Abertura en la pared de un edificio que permite el paso de la luz y el aire, generalmente cerrada con cristal.",
+          "synonyms": ["abertura", "claraboya"],
+          "antonyms": ["puerta", "pared"]
+        }
+      },
+      {
+        "verde": {
+          "definition": "Color que se percibe ante la fotorrecepción de una luz cuya longitud de onda dominante mide entre 520 y 565 nm.",
+          "synonyms": ["esmeralda", "verdoso"],
+          "antonyms": ["rojo", "amarillo"]
+        }
+      },
+      {
+        "vino": {
+          "definition": "Bebida alcohólica obtenida mediante la fermentación del jugo de la uva.",
+          "synonyms": ["vinagre", "bodega"],
+          "antonyms": ["agua", "refresco"]
+        }
+      }
+    ],
+    [
+      {
+        "wok": {
+          "definition": "Utensilio de cocina de origen asiático, utilizado para saltear alimentos.",
+          "synonyms": ["sartén oriental", "wok de cocina"],
+          "antonyms": ["olla", "sartén tradicional"]
+        }
+      },
+      {
+        "whisky": {
+          "definition": "Bebida alcohólica destilada, típicamente de grano o malta.",
+          "synonyms": ["whiskey", "bourbon"],
+          "antonyms": ["agua", "refresco"]
+        }
+      },
+      {
+        "windsurf": {
+          "definition": "Deporte acuático que combina el surf con la vela.",
+          "synonyms": ["surf a vela", "planche à voile"],
+          "antonyms": ["natación", "esquí acuático"]
+        }
+      },
+      {
+        "wifi": {
+          "definition": "Tecnología de conexión inalámbrica a internet.",
+          "synonyms": ["conexión inalámbrica", "red wifi"],
+          "antonyms": ["conexión por cable", "sin conexión"]
+        }
+      }
+    ],
+    [
+      {
+        "xilófono": {
+          "definition": "Instrumento musical de percusión formado por láminas de madera dispuestas como teclado.",
+          "synonyms": ["marimba", "metalófono"],
+          "antonyms": ["batería", "guitarra"]
+        }
+      },
+      {
+        "xenofobia": {
+          "definition": "Aversión u hostilidad hacia los extranjeros.",
+          "synonyms": ["racismo", "discriminación"],
+          "antonyms": ["tolerancia", "aceptación"]
+        }
+      },
+      {
+        "xenón": {
+          "definition": "Elemento químico noble, incoloro e inodoro, usado en lámparas y tubos electrónicos.",
+          "synonyms": ["gas noble", "xenón-54"],
+          "antonyms": ["oxígeno", "nitrógeno"]
+        }
+      },
+      {
+        "xilografía": {
+          "definition": "Técnica de impresión que utiliza planchas de madera grabadas.",
+          "synonyms": ["grabado en madera", "xilografiado"],
+          "antonyms": ["litografía", "serigrafía"]
+        }
+      }
+    ],
+    [
+      {
+        "yogurt": {
+          "definition": "Alimento lácteo obtenido mediante la fermentación bacteriana del yogur.",
+          "synonyms": ["yogur", "cuajada"],
+          "antonyms": ["helado", "queso"]
+        }
+      },
+      {
+        "yunque": {
+          "definition": "Instrumento de metal con una superficie plana sobre el cual se golpean objetos para darles forma.",
+          "synonyms": ["bigornia", "fragua"],
+          "antonyms": ["martillo", "mazo"]
+        }
+      },
+      {
+        "yema": {
+          "definition": "Parte central y amarilla de un huevo, rica en nutrientes.",
+          "synonyms": ["centro", "núcleo"],
+          "antonyms": ["clara", "cáscara"]
+        }
+      },
+      {
+        "yate": {
+          "definition": "Embarcación de lujo, generalmente de gran tamaño, utilizada para recreación.",
+          "synonyms": ["barco", "nave"],
+          "antonyms": ["bote", "canoa"]
+        }
+      }
+    ],
+    [
+      {
+        "zapato": {
+          "definition": "Calzado que cubre y protege el pie.",
+          "synonyms": ["calzado", "zapatilla"],
+          "antonyms": ["calcetín", "descalzo"]
+        }
+      },
+      {
+        "zanahoria": {
+          "definition": "Raíz comestible de color anaranjado, rica en vitamina A y otros nutrientes.",
+          "synonyms": ["zanahoria", "cenoura"],
+          "antonyms": ["papa", "calabaza"]
+        }
+      },
+      {
+        "zoo": {
+          "definition": "Facilidad donde se mantienen y exhiben animales para el público.",
+          "synonyms": ["zoologico", "bioparque"],
+          "antonyms": ["selva", "hábitat natural"]
+        }
+      },
+      {
+        "zorro": {
+          "definition": "Mamífero carnívoro de pelaje espeso, cola larga y hocico puntiagudo.",
+          "synonyms": ["raposo", "zorrillo"],
+          "antonyms": ["ciervo", "venado"]
+        }
+      }
+    ]
+  ]
+}
