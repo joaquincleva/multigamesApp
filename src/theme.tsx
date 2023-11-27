@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@mui/material";
 import createTheme from "@mui/material/styles/createTheme";
 import { useState, useMemo, createContext } from "react";
-import { amber, deepOrange, grey } from "@mui/material/colors";
+import { grey } from "@mui/material/colors";
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
@@ -29,6 +29,7 @@ export default function ToggleColorMode({ children }: ResponsiveDrawerProps) {
             main: "#000",
             ...(mode === "dark" && {
               main: "#FFF",
+              info: "#2196f3"
             }),
           },
           ...(mode === "dark" && {

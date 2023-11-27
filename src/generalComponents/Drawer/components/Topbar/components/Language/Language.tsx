@@ -11,7 +11,6 @@ import { useTranslation } from "react-i18next";
 
 const Language = () => {
   const { t, i18n } = useTranslation();
-  console.log(i18n.language);
   
   return (
     <FormControl sx={{margin: 0, padding: 0, mx: 0, my:0 }}>

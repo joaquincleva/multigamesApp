@@ -53,7 +53,7 @@ const ResponsiveDrawer = ({ children }: ResponsiveDrawerProps) => {
   });
 
   return (
-    <Box sx={{ display: "flex", backgroundColor: "lime", width: "100%", height: "100% !important" }}>
+    <Box sx={{ display: "flex", width: "100%", height: "100% !important" }}>
       <CssBaseline />
       <Topbar
         {...{
