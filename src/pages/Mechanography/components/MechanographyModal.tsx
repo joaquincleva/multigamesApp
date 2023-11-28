@@ -5,6 +5,7 @@ interface RoscoModalProps {
   closeModal: () => void;
   correctWords: number;
   incorrectWords: number;
+  mechanographyRecord: number
 }
 
 const MechanographyModal = ({
@@ -12,6 +13,7 @@ const MechanographyModal = ({
   closeModal,
   correctWords,
   incorrectWords,
+  mechanographyRecord
 }: RoscoModalProps) => {
   return (
     <Modal
@@ -60,7 +62,7 @@ const MechanographyModal = ({
           </Grid>
           <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography variant="h6">Record</Typography>
-            <Typography>{correctWords - incorrectWords}</Typography>
+            <Typography>{mechanographyRecord}</Typography>
           </Grid>
         </Grid>
       </Box>
