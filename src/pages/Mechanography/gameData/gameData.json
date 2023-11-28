@@ -1,0 +1,36 @@
+{
+    "spanishWords": [
+        "el", "la", "de", "que", "a", "en", "un", "ser", "se",
+        "por", "con", "no", "para", "haber", "como", "estar", "tener", "todo", "pero",
+        "más", "hacer", "o", "poder", "decir", "este", "ir", "su", "mi", "nuestro",
+        "tu", "este", "ese", "aquí", "ahí", "allí", "cuando", "donde", "entonces", "mientras", "porque",
+        "si", "sí", "cómo", "muy", "mucho", "poco", "otro", "algo", "alguien", "ninguno",
+        "hoy", "ayer", "mañana", "primero", "último", "bien", "mal", "mejor", "peor", "mayor",
+        "menor", "gran", "pequeño", "nuevo", "viejo", "bueno", "malo", "alto", "bajo", "largo",
+        "corto", "gente", "cosa", "tiempo", "momento", "vida", "día", "noche", "mes", "año",
+        "lugar", "casa", "ciudad", "país", "mundo", "camino", "agua", "fuego", "aire", "tierra",
+        "sol", "luna", "estrella", "color", "forma", "número", "letra", "palabra", "frase", "párrafo",
+        "texto", "imagen", "sonido", "música", "arte", "cultura", "historia", "ciencia", "tecnología", "persona",
+        "hombre", "mujer", "niño", "niña", "joven", "adulto", "anciano", "amigo", "amiga", "familia",
+        "padre", "madre", "hijo", "hija", "hermano", "hermana", "amor", "odio", "feliz", "triste",
+        "enfermo", "sano", "fuerte", "débil", "rico", "pobre", "trabajo", "dinero", "educación", "cultura"
+    ],
+    "englishWords": [
+        "the", "be", "to", "of", "and", "a", "in", "that", "have",
+        "it", "for", "not", "on", "with", "he", "as", "you", "do", "at",
+        "this", "but", "his", "by", "from", "they", "we", "say", "her", "she",
+        "or", "an", "will", "my", "one", "all", "would", "there", "their", "what",
+        "so", "up", "out", "if", "about", "who", "get", "which", "go", "me",
+        "when", "make", "can", "like", "time", "no", "just", "him", "know", "take",
+        "people", "into", "year", "your", "good", "some", "could", "them", "see", "other",
+        "than", "then", "now", "look", "only", "come", "its", "over", "think", "also",
+        "back", "after", "use", "two", "how", "our", "work", "first", "well", "way",
+        "even", "new", "want", "because", "any", "these", "give", "day", "most", "us",
+        "is", "are", "was", "were", "has", "been", "being", "am", "have", "has",
+        "had", "do", "does", "did", "can", "could", "will", "shall", "should", "would",
+        "may", "might", "must", "ought", "to", "used", "use", "using", "be", "being",
+        "been", "am", "is", "are", "was", "were", "you", "he", "she",
+        "it", "we", "they", "me", "him", "her", "us", "them", "my", "mine",
+        "your", "yours", "his", "her", "hers", "its", "our", "ours", "their", "theirs"
+    ]
+  }
