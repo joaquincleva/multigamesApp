@@ -2,31 +2,56 @@ import { useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect, useCallback } from "react";
 import roscoGameData from "../gameData/gameData.json";
+import { useDispatch, useSelector } from "react-redux";
+import { AppStore } from "../../../redux/store";
+import {
+  setRoscoScore,
+  setRoscoStats,
+} from "../../../redux/states/roscoReduxState";
+import { handleLocalStorage } from "../../../utils/handleLocalStorage";
 
 export interface RoscoGame {
-    counter: number;
-    correctAnswers: number;
-    incorrectAnswers: number;
-    responseText: string;
-    activeTimer: boolean;
-    timer: number;
-    answerText: string;
-    definition: string;
-    message: string;
-    antonyms: string[];
-    synonyms: string[];
-    disableAntonyms: boolean;
-    disableSynonyms: boolean;
-    disableLettersQty: boolean;
-    resultsArray: string[];
-  }
+  counter: number;
+  correctAnswers: number;
+  incorrectAnswers: number;
+  responseText: string;
+  activeTimer: boolean;
+  timer: number;
+  answerText: string;
+  definition: string;
+  message: string;
+  antonyms: string[];
+  synonyms: string[];
+  disableAntonyms: boolean;
+  disableSynonyms: boolean;
+  disableLettersQty: boolean;
+  resultsArray: string[];
+}
 
 const useRosco = () => {
-  
   //Variables
   const mode = useTheme().palette.mode;
   const { i18n } = useTranslation();
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const roscoReduxStats = useSelector(
+    (state: AppStore) => state.roscoReduxState
+  );
+  const roscoRecord = roscoReduxStats.max;
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (roscoReduxStats.results.length != 0) {
+      handleLocalStorage("set", "rosco", roscoReduxStats);
+    }
+  }, [roscoReduxStats]);
+
+  useEffect(() => {
+    const localStorageRecord = handleLocalStorage("get", "rosco");
+    if (localStorageRecord) {
+      dispatch(setRoscoStats(JSON.parse(localStorageRecord)));
+    }
+    //eslint-disable-next-line
+  }, []);
 
   //States
   const [roscoGameState, setRoscoGameState] = useState<RoscoGame>({
@@ -187,12 +212,14 @@ const useRosco = () => {
       setRoscoGameState((prevState) => ({
         ...prevState,
         activeTimer: false,
+        counter: 27,
       }));
       setIsModalOpen(true);
       return;
     }
     const timeoutFunction = setInterval(decrementTimer, 1000);
     return () => clearInterval(timeoutFunction);
+    //eslint-disable-next-line
   }, [decrementTimer, roscoGameState.timer]);
 
   useEffect(() => {
@@ -200,7 +227,18 @@ const useRosco = () => {
       setRoscoGameState((prevState) => ({
         ...prevState,
         activeTimer: false,
+        counter: 27,
       }));
+      dispatch(
+        setRoscoScore(
+          (roscoGameState.correctAnswers == 26 ? 30 : 0) +
+            roscoGameState.correctAnswers -
+            (Number(roscoGameState.disableAntonyms) +
+              Number(roscoGameState.disableSynonyms) +
+              Number(roscoGameState.disableLettersQty)) -
+            roscoGameState.incorrectAnswers
+        )
+      );
       setIsModalOpen(true);
     } else if (roscoGameState.activeTimer) {
       let data = [];
@@ -219,6 +257,7 @@ const useRosco = () => {
         synonyms: Object.values(word)[0].synonyms,
       }));
     }
+    //eslint-disable-next-line
   }, [roscoGameState.counter, i18n.language, roscoGameState.activeTimer]);
 
   return {
@@ -232,6 +271,7 @@ const useRosco = () => {
     closeModal,
     handleSnackbar,
     handleEnterKey,
+    roscoRecord,
   };
 };
 

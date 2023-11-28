@@ -22,6 +22,7 @@ const Mechanography = () => {
     isModalOpen,
     mode,
     closeModal,
+    mechanographyRecord,
   } = useMechanography();
 
   return (
@@ -179,12 +180,7 @@ const Mechanography = () => {
           <Grid sx={{ width: "75%", mb: 1 }}>
             <Grid display={"flex"} sx={{ justifyContent: "space-between" }}>
               <Typography variant="h6">Record: </Typography>
-              <Typography variant="h6">
-                {mechanographyGameState.answerArray.reduce(
-                  (acc, val) => acc + val,
-                  0
-                )}
-              </Typography>
+              <Typography variant="h6">{mechanographyRecord}</Typography>
             </Grid>
             <Divider />
             <Grid display={"flex"} sx={{ justifyContent: "space-between" }}>
@@ -214,6 +210,7 @@ const Mechanography = () => {
             .slice(0, mechanographyGameState.current + 1)
             .filter((num) => num === 0).length
         }
+        mechanographyRecord={mechanographyRecord}
       />
     </Box>
   );

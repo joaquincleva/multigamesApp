@@ -2,6 +2,10 @@ import { useTheme } from "@mui/material";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import gameData from "../gameData/gameData.json";
+import { useDispatch, useSelector } from "react-redux";
+import { setMechanographyScore, setMechanographyStats } from "../../../redux/states/mechanographyState";
+import { AppStore } from "../../../redux/store";
+import { handleLocalStorage } from "../../../utils/handleLocalStorage";
 
 export interface mechanographyGame {
   activeTimer: boolean;
@@ -19,6 +23,14 @@ const useMechanography = () => {
   //Variables
   const { i18n } = useTranslation();
   const mode = useTheme().palette.mode;
+  const dispatch = useDispatch();
+  const mechanographyStats = useSelector((state: AppStore) => state.mechanography)
+  const mechanographyRecord = mechanographyStats.max
+
+
+  
+
+
 
   //States
 
@@ -126,6 +138,20 @@ const useMechanography = () => {
   //Effects
 
   useEffect(() => {
+    if (mechanographyStats.results.length != 0) {
+      handleLocalStorage("set", "mechanography", mechanographyStats);
+    }
+  }, [mechanographyStats]);
+
+  useEffect(() => {
+    const localStorageRecord = handleLocalStorage("get", "mechanography");
+    if (localStorageRecord) {
+      dispatch(setMechanographyStats(JSON.parse(localStorageRecord)));
+    }
+    //eslint-disable-next-line
+  }, []);
+  
+  useEffect(() => {
     if (isLastSpanInLine()) {
       setMechanographyGameState((prevState) => ({
         ...prevState,
@@ -141,13 +167,26 @@ const useMechanography = () => {
         ...prevState,
         activeTimer: false,
         runningGame: false,
+        timer: 60,
       }));
+      dispatch(
+        setMechanographyScore(
+          mechanographyGameState.answerArray.reduce(
+            (acc, val) => acc + val,
+            0
+          ) -
+            mechanographyGameState.answerArray
+              .slice(0, mechanographyGameState.current + 1)
+              .filter((num) => num === 0).length
+        )
+      );
 
       setIsModalOpen(true);
       return;
     }
     const timeoutFunction = setInterval(decrementTimer, 1000);
     return () => clearInterval(timeoutFunction);
+    //eslint-disable-next-line
   }, [decrementTimer, mechanographyGameState.timer]);
 
   useEffect(() => {
@@ -178,7 +217,8 @@ const useMechanography = () => {
     isLastSpanInLine,
     closeModal,
     handleEnterKey,
-    handleReset
+    handleReset,
+    mechanographyRecord
   };
 };
 

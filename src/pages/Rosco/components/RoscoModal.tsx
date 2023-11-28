@@ -6,9 +6,15 @@ interface RoscoModalProps {
   isModalOpen: boolean;
   closeModal: () => void;
   roscoGameState: RoscoGame;
+  roscoRecord: number;
 }
 
-const RoscoModal = ({ isModalOpen, closeModal, roscoGameState }: RoscoModalProps) => {
+const RoscoModal = ({
+  isModalOpen,
+  closeModal,
+  roscoGameState,
+  roscoRecord,
+}: RoscoModalProps) => {
   return (
     <Modal
       open={isModalOpen}
@@ -69,6 +75,10 @@ const RoscoModal = ({ isModalOpen, closeModal, roscoGameState }: RoscoModalProps
                   Number(roscoGameState.disableLettersQty)) -
                 roscoGameState.incorrectAnswers}
             </Typography>
+          </Grid>
+          <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Typography variant="h6">Record</Typography>
+            <Typography>{roscoRecord}</Typography>
           </Grid>
         </Grid>
       </Box>

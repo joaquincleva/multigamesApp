@@ -28,6 +28,7 @@ const Rosco = () => {
     closeModal,
     handleSnackbar,
     handleEnterKey,
+    roscoRecord,
   } = useRosco();
 
   return (
@@ -120,6 +121,7 @@ const Rosco = () => {
             {alphabet.split("").map((letter, index) => {
               return (
                 <Avatar
+                  key={index}
                   sx={{
                     ...roscoGameStyles.avatarLetters,
                     bgcolor: `${roscoGameState.resultsArray[index]}`,
@@ -223,7 +225,9 @@ const Rosco = () => {
             {roscoGameState.message}
           </Alert>
         </Snackbar>
-        <RoscoModal {...{ isModalOpen, roscoGameState, closeModal }} />
+        <RoscoModal
+          {...{ isModalOpen, roscoGameState, closeModal, roscoRecord }}
+        />
       </Grid>
     </Box>
   );
