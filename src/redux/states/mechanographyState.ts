@@ -38,7 +38,7 @@ export const mechanographySlice = createSlice({
       state.results = [...state.results, newResult];
       return state;
     },
-    deleteState: (state: unknown, action: { payload: unknown }) =>
+    deleteState: (_: unknown, __: { payload: unknown }) =>
       mechanographyReduxState,
   },
 });

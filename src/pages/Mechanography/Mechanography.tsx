@@ -211,6 +211,7 @@ const Mechanography = () => {
             .filter((num) => num === 0).length
         }
         mechanographyRecord={mechanographyRecord}
+        previousRecord= {mechanographyGameState.previousRecord}
       />
     </Box>
   );
