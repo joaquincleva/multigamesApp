@@ -28,7 +28,7 @@ const MathGame = () => {
   return (
     <Box sx={mathGameStyles.boxContainer}>
       <Grid container sx={mathGameStyles.gridContainer}>
-        <Grid item xs={12} md={6} sx={mathGameStyles.leftSideContainer}>
+        <Grid item xs={12} md={8} sx={mathGameStyles.leftSideContainer}>
           <Grid
             container
             id="wordsContainer"
@@ -93,7 +93,7 @@ const MathGame = () => {
         <Grid
           item
           xs={12}
-          md={6}
+          md={4}
           sx={mathGameStyles.rightSideContainer}
         >
           <Grid>

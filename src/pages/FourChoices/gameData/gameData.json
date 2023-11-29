@@ -1,0 +1,630 @@
+{
+  "englishWords": [
+    {
+      "apple": {
+        "definition": "A round fruit with red or green skin and a whitish interior",
+        "incorrectWords": ["apricot", "orange", "banana"]
+      }
+    },
+    {
+      "book": {
+        "definition": "A set of written or printed pages, usually bound with a protective cover",
+        "incorrectWords": ["novel", "magazine", "newspaper"]
+      }
+    },
+    {
+      "computer": {
+        "definition": "An electronic device for storing and processing data",
+        "incorrectWords": ["calculator", "tablet", "television"]
+      }
+    },
+    {
+      "dog": {
+        "definition": "A domesticated carnivorous mammal",
+        "incorrectWords": ["cat", "horse", "bird"]
+      }
+    },
+    {
+      "elephant": {
+        "definition": "A large herbivorous mammal with a long trunk and tusks",
+        "incorrectWords": ["rhinoceros", "hippopotamus", "giraffe"]
+      }
+    },
+    {
+      "flower": {
+        "definition": "The reproductive structure of a plant, typically consisting of petals and sepals",
+        "incorrectWords": ["tree", "grass", "shrub"]
+      }
+    },
+    {
+      "guitar": {
+        "definition": "A stringed musical instrument with a fretted fingerboard and a typically curved body",
+        "incorrectWords": ["piano", "drums", "violin"]
+      }
+    },
+    {
+      "house": {
+        "definition": "A building for human habitation",
+        "incorrectWords": ["apartment", "cabin", "mansion"]
+      }
+    },
+    {
+      "island": {
+        "definition": "A piece of land surrounded by water",
+        "incorrectWords": ["peninsula", "lake", "continent"]
+      }
+    },
+    {
+      "jacket": {
+        "definition": "A short coat, typically extending to the hips",
+        "incorrectWords": ["shirt", "pants", "hat"]
+      }
+    },
+    {
+      "kangaroo": {
+        "definition": "A large herbivorous marsupial with a long tail and strong hind legs",
+        "incorrectWords": ["koala", "wombat", "platypus"]
+      }
+    },
+    {
+      "lamp": {
+        "definition": "A device for giving light, typically consisting of a bulb and shade",
+        "incorrectWords": ["candle", "flashlight", "lantern"]
+      }
+    },
+    {
+      "mountain": {
+        "definition": "A large landform that rises prominently above its surroundings",
+        "incorrectWords": ["hill", "valley", "plain"]
+      }
+    },
+    {
+      "notebook": {
+        "definition": "A book with blank pages for writing notes",
+        "incorrectWords": ["diary", "journal", "novel"]
+      }
+    },
+    {
+      "ocean": {
+        "definition": "A very large expanse of sea",
+        "incorrectWords": ["lake", "river", "pond"]
+      }
+    },
+    {
+      "piano": {
+        "definition": "A large keyboard musical instrument with a wooden case enclosing a soundboard and metal strings",
+        "incorrectWords": ["guitar", "violin", "drums"]
+      }
+    },
+    {
+      "queen": {
+        "definition": "The female ruler of an independent state",
+        "incorrectWords": ["princess", "empress", "duchess"]
+      }
+    },
+    {
+      "rainbow": {
+        "definition": "A meteorological phenomenon that is caused by reflection, refraction, and dispersion of light",
+        "incorrectWords": ["sunshine", "cloud", "storm"]
+      }
+    },
+    {
+      "sunflower": {
+        "definition": "A tall North American plant of the daisy family, with very large golden-rayed flowers",
+        "incorrectWords": ["rose", "tulip", "daisy"]
+      }
+    },
+    {
+      "telescope": {
+        "definition": "An optical instrument that gathers and magnifies light to observe distant objects",
+        "incorrectWords": ["microscope", "binoculars", "camera"]
+      }
+    },
+    {
+      "umbrella": {
+        "definition": "A device consisting of a circular canopy of cloth on a folding metal frame supported by a central rod",
+        "incorrectWords": ["raincoat", "hat", "gloves"]
+      }
+    },
+    {
+      "violin": {
+        "definition": "A stringed musical instrument played with a bow, typically made of horsehair",
+        "incorrectWords": ["trumpet", "flute", "clarinet"]
+      }
+    },
+    {
+      "waterfall": {
+        "definition": "A cascade of water falling from a height",
+        "incorrectWords": ["stream", "river", "lake"]
+      }
+    },
+    {
+      "xylophone": {
+        "definition": "A musical instrument played by striking a row of wooden bars with mallets",
+        "incorrectWords": ["drum", "trumpet", "flute"]
+      }
+    },
+    {
+      "yogurt": {
+        "definition": "A dairy product made by bacterial fermentation of milk",
+        "incorrectWords": ["cheese", "butter", "cream"]
+      }
+    },
+    {
+      "zebra": {
+        "definition": "An African wild horse with black-and-white stripes and an erect mane",
+        "incorrectWords": ["giraffe", "lion", "elephant"]
+      }
+    },
+    {
+      "airplane": {
+        "definition": "A powered flying vehicle with fixed wings and a weight greater than that of the air it displaces",
+        "incorrectWords": ["helicopter", "balloon", "glider"]
+      }
+    },
+    {
+      "butterfly": {
+        "definition": "A winged insect with a slender body and large, often colorful wings",
+        "incorrectWords": ["beetle", "ant", "moth"]
+      }
+    },
+    {
+      "chocolate": {
+        "definition": "A sweet food made from roasted and ground cacao seeds",
+        "incorrectWords": ["vanilla", "strawberry", "caramel"]
+      }
+    },
+    {
+      "dragon": {
+        "definition": "A mythical monster resembling a reptile, often represented as breathing fire",
+        "incorrectWords": ["unicorn", "griffin", "phoenix"]
+      }
+    },
+    {
+      "eagle": {
+        "definition": "A large bird of prey with a hooked beak and strong claws",
+        "incorrectWords": ["sparrow", "hawk", "owl"]
+      }
+    },
+    {
+      "fireplace": {
+        "definition": "An architectural structure for containing a fire, typically in a house",
+        "incorrectWords": ["stove", "furnace", "barbecue"]
+      }
+    },
+    {
+      "giraffe": {
+        "definition": "A large African mammal with a very long neck and legs",
+        "incorrectWords": ["zebra", "lion", "elephant"]
+      }
+    },
+    {
+      "hamburger": {
+        "definition": "A cooked patty of ground meat, usually beef, placed inside a sliced bread roll or bun",
+        "incorrectWords": ["hotdog", "sandwich", "pizza"]
+      }
+    },
+    {
+      "ice cream": {
+        "definition": "A frozen sweetened food typically eaten as a snack or dessert",
+        "incorrectWords": ["sorbet", "gelato", "popsicle"]
+      }
+    },
+    {
+      "jellyfish": {
+        "definition": "A free-swimming marine animal with a gelatinous umbrella-shaped bell and trailing tentacles",
+        "incorrectWords": ["octopus", "squid", "starfish"]
+      }
+    },
+    {
+      "koala": {
+        "definition": "A small Australian marsupial with thick fur and a broad face",
+        "incorrectWords": ["kangaroo", "wombat", "platypus"]
+      }
+    },
+    {
+      "lighthouse": {
+        "definition": "A tower or other structure containing a beacon light to warn or guide ships at sea",
+        "incorrectWords": ["buoy", "anchor", "ship"]
+      }
+    },
+    {
+      "moon": {
+        "definition": "The natural satellite of the Earth, visible by reflection of sunlight",
+        "incorrectWords": ["planet", "star", "sun"]
+      }
+    },
+    {
+      "noodles": {
+        "definition": "A food paste made from wheat, rice, or other cereals, often served in soup",
+        "incorrectWords": ["rice", "pasta", "bread"]
+      }
+    },
+    {
+      "octopus": {
+        "definition": "A soft-bodied, eight-armed mollusk with a beak and venomous bite",
+        "incorrectWords": ["squid", "jellyfish", "starfish"]
+      }
+    },
+    {
+      "penguin": {
+        "definition": "A flightless bird native to the Southern Hemisphere, known for its black and white plumage",
+        "incorrectWords": ["seagull", "pelican", "swan"]
+      }
+    },
+    {
+      "quasar": {
+        "definition": "An extremely luminous active galactic nucleus",
+        "incorrectWords": ["star", "planet", "nebula"]
+      }
+    },
+    {
+      "rocket": {
+        "definition": "A cylindrical projectile that can be propelled to a great height or distance",
+        "incorrectWords": ["airplane", "helicopter", "balloon"]
+      }
+    },
+    {
+      "strawberry": {
+        "definition": "A sweet, red, conical fruit with a green top",
+        "incorrectWords": ["blueberry", "raspberry", "blackberry"]
+      }
+    },
+    {
+      "turtle": {
+        "definition": "A reptile with a bony or leathery shell and flippers",
+        "incorrectWords": ["snake", "lizard", "crocodile"]
+      }
+    },
+    {
+      "umbrella": {
+        "definition": "A device consisting of a circular canopy of cloth on a folding metal frame supported by a central rod",
+        "incorrectWords": ["raincoat", "hat", "gloves"]
+      }
+    },
+    {
+      "volcano": {
+        "definition": "An opening in the Earth's crust that allows molten rock, ash, and gases to escape",
+        "incorrectWords": ["mountain", "hill", "cave"]
+      }
+    },
+    {
+      "watermelon": {
+        "definition": "A large, green-skinned fruit with red or pink flesh and black seeds",
+        "incorrectWords": ["cantaloupe", "honeydew", "kiwi"]
+      }
+    },
+    {
+      "xylophone": {
+        "definition": "A musical instrument played by striking a row of wooden bars with mallets",
+        "incorrectWords": ["drum", "trumpet", "flute"]
+      }
+    },
+    {
+      "yoga": {
+        "definition": "A physical, mental, and spiritual practice that originated in ancient India",
+        "incorrectWords": ["meditation", "pilates", "aerobics"]
+      }
+    },
+    {
+      "zeppelin": {
+        "definition": "A large rigid airship consisting of a cylindrical metal frame covered with fabric",
+        "incorrectWords": ["blimp", "airplane", "helicopter"]
+      }
+    }
+  ],
+  "spanishWords": [
+    {
+      "manzana": {
+        "definition": "Una fruta redonda con piel roja o verde y un interior blanquecino",
+        "incorrectWords": ["pera", "naranja", "plátano"]
+      }
+    },
+    {
+      "libro": {
+        "definition": "Un conjunto de páginas escritas o impresas, generalmente encuadernadas con una cubierta",
+        "incorrectWords": ["novela", "revista", "periódico"]
+      }
+    },
+    {
+      "computadora": {
+        "definition": "Un dispositivo electrónico para almacenar y procesar datos",
+        "incorrectWords": ["calculadora", "tableta", "televisión"]
+      }
+    },
+    {
+      "perro": {
+        "definition": "Un mamífero carnívoro domesticado",
+        "incorrectWords": ["gato", "caballo", "pájaro"]
+      }
+    },
+    {
+      "elefante": {
+        "definition": "Un mamífero herbívoro grande con una trompa larga y colmillos",
+        "incorrectWords": ["rinoceronte", "hipopótamo", "jirafa"]
+      }
+    },
+    {
+      "flor": {
+        "definition": "La estructura reproductiva de una planta, generalmente compuesta por pétalos y sépalos",
+        "incorrectWords": ["árbol", "pasto", "arbusto"]
+      }
+    },
+    {
+      "guitarra": {
+        "definition": "Un instrumento musical de cuerda con un diapasón y un cuerpo típicamente curvado",
+        "incorrectWords": ["piano", "tambores", "violín"]
+      }
+    },
+    {
+      "casa": {
+        "definition": "Un edificio para la habitación humana",
+        "incorrectWords": ["apartamento", "cabaña", "mansión"]
+      }
+    },
+    {
+      "isla": {
+        "definition": "Una porción de tierra rodeada de agua",
+        "incorrectWords": ["península", "lago", "continente"]
+      }
+    },
+    {
+      "chaqueta": {
+        "definition": "Una chaqueta corta, generalmente hasta las caderas",
+        "incorrectWords": ["camisa", "pantalones", "sombrero"]
+      }
+    },
+    {
+      "canguro": {
+        "definition": "Un marsupial herbívoro grande con una cola larga y patas traseras fuertes",
+        "incorrectWords": ["koala", "wombat", "ornitorrinco"]
+      }
+    },
+    {
+      "lámpara": {
+        "definition": "Un dispositivo que proporciona luz, generalmente compuesto por una bombilla y una pantalla",
+        "incorrectWords": ["vela", "linterna", "farol"]
+      }
+    },
+    {
+      "montaña": {
+        "definition": "Una gran elevación de terreno que se destaca prominentemente sobre su entorno",
+        "incorrectWords": ["colina", "valle", "llanura"]
+      }
+    },
+    {
+      "cuaderno": {
+        "definition": "Un libro con páginas en blanco para tomar notas",
+        "incorrectWords": ["diario", "revista", "novela"]
+      }
+    },
+    {
+      "océano": {
+        "definition": "Una extensión muy grande de mar",
+        "incorrectWords": ["lago", "río", "estanque"]
+      }
+    },
+    {
+      "piano": {
+        "definition": "Un instrumento musical de teclado con un estuche de madera que encierra una tabla de resonancia y cuerdas metálicas",
+        "incorrectWords": ["guitarra", "violín", "tambores"]
+      }
+    },
+    {
+      "reina": {
+        "definition": "La mujer que gobierna un estado independiente",
+        "incorrectWords": ["princesa", "emperatriz", "duquesa"]
+      }
+    },
+    {
+      "arco iris": {
+        "definition": "Un fenómeno meteorológico causado por la reflexión, refracción y dispersión de la luz",
+        "incorrectWords": ["sol", "nube", "tormenta"]
+      }
+    },
+    {
+      "girasol": {
+        "definition": "Una planta alta de América del Norte de la familia de las margaritas, con flores doradas muy grandes",
+        "incorrectWords": ["rosa", "tulipán", "margarita"]
+      }
+    },
+    {
+      "telescopio": {
+        "definition": "Un instrumento óptico que recoge y amplía la luz para observar objetos distantes",
+        "incorrectWords": ["microscopio", "binoculares", "cámara"]
+      }
+    },
+    {
+      "paraguas": {
+        "definition": "Un dispositivo que consiste en un dosel circular de tela en un marco de metal plegable sostenido por una varilla central",
+        "incorrectWords": ["impermeable", "sombrero", "guantes"]
+      }
+    },
+    {
+      "violín": {
+        "definition": "Un instrumento musical de cuerda tocado con un arco, generalmente hecho de crin de caballo",
+        "incorrectWords": ["trompeta", "flauta", "clarinete"]
+      }
+    },
+    {
+      "cascada": {
+        "definition": "Una cascada de agua que cae desde una altura",
+        "incorrectWords": ["arroyo", "río", "lago"]
+      }
+    },
+    {
+      "xilófono": {
+        "definition": "Un instrumento musical tocado golpeando una fila de barras de madera con mazos",
+        "incorrectWords": ["tambor", "trompeta", "flauta"]
+      }
+    },
+    {
+      "yogur": {
+        "definition": "Un producto lácteo hecho por fermentación bacteriana de la leche",
+        "incorrectWords": ["queso", "mantequilla", "crema"]
+      }
+    },
+    {
+      "cebra": {
+        "definition": "Un caballo salvaje africano con rayas en blanco y negro y una melena erguida",
+        "incorrectWords": ["jirafa", "león", "elefante"]
+      }
+    },
+    {
+      "avión": {
+        "definition": "Un vehículo volador motorizado con alas fijas y un peso mayor que el del aire que desplaza",
+        "incorrectWords": ["helicóptero", "globos", "planeador"]
+      }
+    },
+    {
+      "mariposa": {
+        "definition": "Un insecto alado con un cuerpo delgado y alas grandes y a menudo coloridas",
+        "incorrectWords": ["escarabajo", "hormiga", "polilla"]
+      }
+    },
+    {
+      "chocolate": {
+        "definition": "Un alimento dulce hecho a partir de granos de cacao tostados y molidos",
+        "incorrectWords": ["vainilla", "fresa", "caramelo"]
+      }
+    },
+    {
+      "dragón": {
+        "definition": "Un monstruo mítico parecido a un reptil, a menudo representado como escupiendo fuego",
+        "incorrectWords": ["unicornio", "grifo", "fénix"]
+      }
+    },
+    {
+      "águila": {
+        "definition": "Un ave grande de presa con un pico curvo y garras fuertes",
+        "incorrectWords": ["gorrión", "halcón", "búho"]
+      }
+    },
+    {
+      "chimenea": {
+        "definition": "Una estructura arquitectónica para contener un fuego, generalmente en una casa",
+        "incorrectWords": ["estufa", "horno", "barbacoa"]
+      }
+    },
+    {
+      "jirafa": {
+        "definition": "Un mamífero africano grande con un cuello y patas muy largos",
+        "incorrectWords": ["cebra", "león", "elefante"]
+      }
+    },
+    {
+      "hamburguesa": {
+        "definition": "Una hamburguesa cocida de carne molida, generalmente vacuna, colocada dentro de un panecillo cortado o bollo",
+        "incorrectWords": ["hotdog", "sándwich", "pizza"]
+      }
+    },
+    {
+      "helado": {
+        "definition": "Un alimento dulce congelado, generalmente consumido como aperitivo o postre",
+        "incorrectWords": ["sorbete", "helado italiano", "paleta"]
+      }
+    },
+    {
+      "medusa": {
+        "definition": "Un animal marino de natación libre con una campana en forma de sombrilla gelatinosa y tentáculos",
+        "incorrectWords": ["pulpo", "calamar", "estrella de mar"]
+      }
+    },
+    {
+      "koala": {
+        "definition": "Un marsupial australiano pequeño con pelaje grueso y una cara ancha",
+        "incorrectWords": ["canguro", "wombat", "ornitorrinco"]
+      }
+    },
+    {
+      "faro": {
+        "definition": "Una torre u otra estructura que contiene una luz de señalización para advertir o guiar a los barcos en el mar",
+        "incorrectWords": ["boyarín", "ancla", "barco"]
+      }
+    },
+    {
+      "luna": {
+        "definition": "el satélite natural de la Tierra, visible por la reflexión de la luz solar",
+        "incorrectWords": ["planeta", "estrella", "sol"]
+      }
+    },
+    {
+      "fideos": {
+        "definition": "Una pasta alimenticia hecha de trigo, arroz u otros cereales, a menudo servida en sopa",
+        "incorrectWords": ["arroz", "pasta", "pan"]
+      }
+    },
+    {
+      "pulpo": {
+        "definition": "Un molusco blando de ocho brazos con pico y mordedura venenosa",
+        "incorrectWords": ["calamar", "medusa", "estrella de mar"]
+      }
+    },
+    {
+      "pingüino": {
+        "definition": "Un ave no voladora nativa del Hemisferio Sur, conocida por su plumaje blanco y negro",
+        "incorrectWords": ["gaviota", "pelícano", "cisne"]
+      }
+    },
+    {
+      "quásar": {
+        "definition": "Un núcleo galáctico activo extremadamente luminoso",
+        "incorrectWords": ["estrella", "planeta", "nebulosa"]
+      }
+    },
+    {
+      "cohete": {
+        "definition": "Un proyectil cilíndrico que puede ser propulsado a gran altura o distancia",
+        "incorrectWords": ["avión", "helicóptero", "globos"]
+      }
+    },
+    {
+      "fresa": {
+        "definition": "Una fruta roja, cónica, con un extremo verde",
+        "incorrectWords": ["arándano", "frambuesa", "zarzamora"]
+      }
+    },
+    {
+      "tortuga": {
+        "definition": "Un reptil con caparazón óseo o coriáceo y aletas",
+        "incorrectWords": ["serpiente", "lagarto", "cocodrilo"]
+      }
+    },
+    {
+      "paraguas": {
+        "definition": "Un dispositivo que consiste en un dosel circular de tela en un marco de metal plegable sostenido por una varilla central",
+        "incorrectWords": ["impermeable", "sombrero", "guantes"]
+      }
+    },
+    {
+      "volcán": {
+        "definition": "Una abertura en la corteza terrestre que permite la salida de roca fundida, ceniza y gases",
+        "incorrectWords": ["montaña", "colina", "cueva"]
+      }
+    },
+    {
+      "sandía": {
+        "definition": "Una fruta grande de piel verde con pulpa roja o rosa y semillas negras",
+        "incorrectWords": ["melón", "calabaza", "kiwi"]
+      }
+    },
+    {
+      "xilófono": {
+        "definition": "Un instrumento musical tocado golpeando una fila de barras de madera con mazos",
+        "incorrectWords": ["tambor", "trompeta", "flauta"]
+      }
+    },
+    {
+      "yoga": {
+        "definition": "Una práctica física, mental y espiritual que se originó en la antigua India",
+        "incorrectWords": ["meditación", "pilates", "aeróbicos"]
+      }
+    },
+    {
+      "zeppelin": {
+        "definition": "Un dirigible grande con un armazón cilíndrico cubierto de tela",
+        "incorrectWords": ["blimp", "avión", "helicóptero"]
+      }
+    }
+  ]
+}
