@@ -60,7 +60,7 @@ const useRosco = () => {
     incorrectAnswers: 0,
     responseText: "",
     activeTimer: false,
-    timer: 300,
+    timer: 10,
     answerText: "",
     definition: "",
     message: "",
@@ -75,10 +75,15 @@ const useRosco = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   //Functions
+
+  const handleCloseSnackbar = () => {
+    setOpenSnackbar(false)
+  }
+
   const closeModal = () => {
     setRoscoGameState((prevState) => ({
       ...prevState,
-      timer: 300,
+      timer: 10,
       counter: 0,
       correctAnswers: 0,
       incorrectAnswers: 0,
@@ -272,6 +277,7 @@ const useRosco = () => {
     handleSnackbar,
     handleEnterKey,
     roscoRecord,
+    handleCloseSnackbar
   };
 };
 

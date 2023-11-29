@@ -23,7 +23,7 @@ const Rosco = () => {
     mode,
     alphabet,
     openSnackbar,
-    setOpenSnackbar,
+    handleCloseSnackbar,
     isModalOpen,
     closeModal,
     handleSnackbar,
@@ -95,6 +95,7 @@ const Rosco = () => {
           </Grid>
           <Grid sx={roscoGameStyles.helpButtons}>
             <HelpButtons
+              timer={roscoGameState.timer}
               buttonText="Mostrar Sinónimos"
               disabled={roscoGameState.disableSynonyms}
               handleSnackbar={handleSnackbar}
@@ -102,6 +103,7 @@ const Rosco = () => {
             />
 
             <HelpButtons
+              timer={roscoGameState.timer}
               buttonText="Mostrar Antónimos"
               disabled={roscoGameState.disableAntonyms}
               handleSnackbar={handleSnackbar}
@@ -109,6 +111,7 @@ const Rosco = () => {
             />
 
             <HelpButtons
+              timer={roscoGameState.timer}
               buttonText="Cantidad de Letras"
               disabled={roscoGameState.disableLettersQty}
               handleSnackbar={handleSnackbar}
@@ -155,7 +158,7 @@ const Rosco = () => {
                 setRoscoGameState((prevState) => ({
                   ...prevState,
                   activeTimer: true,
-                  timer: 300,
+                  timer: 10,
                   counter: 0,
                   correctAnswers: 0,
                   incorrectAnswers: 0,
@@ -217,7 +220,7 @@ const Rosco = () => {
           anchorOrigin={{ horizontal: "center", vertical: "top" }}
           open={openSnackbar}
           autoHideDuration={3000}
-          onClose={() => setOpenSnackbar(false)}
+          onClose={handleCloseSnackbar}
           message={`${roscoGameState.message}`}
           key={"center" + "center"}
         >
