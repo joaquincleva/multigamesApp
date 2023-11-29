@@ -16,6 +16,7 @@ export interface mechanographyGame {
   answerArray: number[];
   lines: number;
   runningGame: boolean;
+  previousRecord: number;
   reset: boolean;
 }
 
@@ -27,11 +28,6 @@ const useMechanography = () => {
   const mechanographyStats = useSelector((state: AppStore) => state.mechanography)
   const mechanographyRecord = mechanographyStats.max
 
-
-  
-
-
-
   //States
 
   const [mechanographyGameState, setMechanographyGameState] =
@@ -42,6 +38,7 @@ const useMechanography = () => {
       responseText: "",
       current: 0,
       answerArray: [],
+      previousRecord: -Infinity,
       lines: 0,
       runningGame: true,
       reset: true,
@@ -163,12 +160,19 @@ const useMechanography = () => {
 
   useEffect(() => {
     if (mechanographyGameState.timer <= 0) {
+      
+      const localStorageRecord = window.localStorage.getItem("mechanography");
+      const parsedRecord = localStorageRecord ? JSON.parse(localStorageRecord) : {};
+      console.log(parsedRecord?.max);
+      
       setMechanographyGameState((prevState) => ({
         ...prevState,
         activeTimer: false,
         runningGame: false,
         timer: 60,
+        previousRecord: Number(parsedRecord?.max || -Infinity)
       }));
+      
       dispatch(
         setMechanographyScore(
           mechanographyGameState.answerArray.reduce(

@@ -1,28 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface roscoResult {
+interface mathGameResult {
   date: Date | string;
   score: number;
 }
 
-export interface RoscoScore {
+export interface MathGameScore {
   min: number;
   max: number;
-  results: roscoResult[];
+  results: mathGameResult[];
 }
 
-const roscoReduxState: RoscoScore = {
+const mathGameReduxState: MathGameScore = {
   min: 0,
   max: 0,
-  results: [] as roscoResult[],
+  results: [] as mathGameResult[],
 };
 
-export const roscoSlice = createSlice({
-  name: "roscoReduxState",
-  initialState: roscoReduxState,
+export const mathGameSlice = createSlice({
+  name: "mathGameReduxState",
+  initialState: mathGameReduxState,
   reducers: {
-    setRoscoStats: (_,action: {payload: any})=>action.payload,
-    setRoscoScore: (state, action: { payload: number }) => {
+    setMathGameStats: (_, action: { payload: any }) => action.payload,
+    setMathGameScore: (state, action: { payload: number }) => {
       const newDate = new Date();
       const newResult = {
         date: newDate,
@@ -40,9 +40,10 @@ export const roscoSlice = createSlice({
       return state;
     },
     deleteState: (_: unknown, __: { payload: unknown }) =>
-      roscoReduxState,
+      mathGameReduxState,
   },
 });
 
-export const { setRoscoScore, deleteState, setRoscoStats } = roscoSlice.actions;
-export default roscoSlice.reducer;
+export const { setMathGameScore, deleteState, setMathGameStats } =
+  mathGameSlice.actions;
+export default mathGameSlice.reducer;

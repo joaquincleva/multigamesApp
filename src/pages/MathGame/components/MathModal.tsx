@@ -1,24 +1,26 @@
 import { Box, Divider, Grid, Modal, Typography } from "@mui/material";
+import { useEffect } from "react";
 
-interface RoscoModalProps {
+interface MathModalProps {
   isModalOpen: boolean;
   closeModal: () => void;
-  correctWords: number;
-  incorrectWords: number;
-  mechanographyRecord: number;
-  previousRecord: number
+  correctAnswers: number;
+  previousRecord: number;
+  incorrectAnswers: number;
+  mathGameRecord: number;
 }
 
-const MechanographyModal = ({
+const MathModal = ({
   isModalOpen,
   closeModal,
-  correctWords,
-  incorrectWords,
-  mechanographyRecord,
-  previousRecord
-}: RoscoModalProps) => {
-  console.log(previousRecord);
-  
+  correctAnswers,
+  previousRecord,
+  incorrectAnswers,
+  mathGameRecord,
+}: MathModalProps) => {
+  useEffect(() => {
+    console.log(previousRecord);
+  }, [previousRecord]);
   return (
     <Modal
       open={isModalOpen}
@@ -41,7 +43,7 @@ const MechanographyModal = ({
         <Typography variant="h5" textAlign={"center"}>
           El tiempo ha terminado
         </Typography>
-        {(correctWords - incorrectWords) > previousRecord && (
+        {mathGameRecord > previousRecord && (
           <Typography variant="body2" textAlign={"center"} color={"#4caf50"}>
             ¡Nuevo record!
           </Typography>
@@ -52,21 +54,21 @@ const MechanographyModal = ({
           </Typography>
           <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>Respuestas Correctas</Typography>
-            <Typography color={"#4caf50"}>{correctWords}</Typography>
+            <Typography color={"#4caf50"}>{correctAnswers}</Typography>
           </Grid>
           <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography>Respuestas Inorrectas</Typography>
-            <Typography color={"error"}>{incorrectWords}</Typography>
+            <Typography color={"error"}>{incorrectAnswers}</Typography>
           </Grid>
 
           <Divider />
           <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography variant="h6">Total</Typography>
-            <Typography>{correctWords - incorrectWords}</Typography>
+            <Typography>{correctAnswers - incorrectAnswers}</Typography>
           </Grid>
           <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
             <Typography variant="h6">Record</Typography>
-            <Typography>{mechanographyRecord}</Typography>
+            <Typography>{mathGameRecord}</Typography>
           </Grid>
         </Grid>
       </Box>
@@ -74,4 +76,4 @@ const MechanographyModal = ({
   );
 };
 
-export default MechanographyModal;
+export default MathModal;
