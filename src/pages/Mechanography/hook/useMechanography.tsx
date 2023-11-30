@@ -3,7 +3,10 @@ import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import gameData from "../gameData/gameData.json";
 import { useDispatch, useSelector } from "react-redux";
-import { setMechanographyScore, setMechanographyStats } from "../../../redux/states/mechanographyState";
+import {
+  setMechanographyScore,
+  setMechanographyStats,
+} from "../../../redux/states/mechanographyState";
 import { AppStore } from "../../../redux/store";
 import { handleLocalStorage } from "../../../utils/handleLocalStorage";
 
@@ -25,8 +28,10 @@ const useMechanography = () => {
   const { i18n } = useTranslation();
   const mode = useTheme().palette.mode;
   const dispatch = useDispatch();
-  const mechanographyStats = useSelector((state: AppStore) => state.mechanography)
-  const mechanographyRecord = mechanographyStats.max
+  const mechanographyStats = useSelector(
+    (state: AppStore) => state.mechanography
+  );
+  const mechanographyRecord = mechanographyStats.max;
 
   //States
 
@@ -147,7 +152,7 @@ const useMechanography = () => {
     }
     //eslint-disable-next-line
   }, []);
-  
+
   useEffect(() => {
     if (isLastSpanInLine()) {
       setMechanographyGameState((prevState) => ({
@@ -160,19 +165,20 @@ const useMechanography = () => {
 
   useEffect(() => {
     if (mechanographyGameState.timer <= 0) {
-      
       const localStorageRecord = window.localStorage.getItem("mechanography");
-      const parsedRecord = localStorageRecord ? JSON.parse(localStorageRecord) : {};
+      const parsedRecord = localStorageRecord
+        ? JSON.parse(localStorageRecord)
+        : {};
       console.log(parsedRecord?.max);
-      
+
       setMechanographyGameState((prevState) => ({
         ...prevState,
         activeTimer: false,
         runningGame: false,
         timer: 60,
-        previousRecord: Number(parsedRecord?.max || -Infinity)
+        previousRecord: Number(parsedRecord?.max || -Infinity),
       }));
-      
+
       dispatch(
         setMechanographyScore(
           mechanographyGameState.answerArray.reduce(
@@ -222,7 +228,7 @@ const useMechanography = () => {
     closeModal,
     handleEnterKey,
     handleReset,
-    mechanographyRecord
+    mechanographyRecord,
   };
 };
 

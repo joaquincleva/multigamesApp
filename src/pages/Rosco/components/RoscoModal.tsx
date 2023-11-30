@@ -28,6 +28,18 @@ const RoscoModal = ({
             ? "Felicitaciones! Has completado el rosco"
             : "EL juego ha terminado"}
         </Typography>
+
+        {(roscoGameState.correctAnswers == 26 ? 30 : 0) +
+          roscoGameState.correctAnswers -
+          (Number(roscoGameState.disableAntonyms) +
+            Number(roscoGameState.disableSynonyms) +
+            Number(roscoGameState.disableLettersQty)) -
+          roscoGameState.incorrectAnswers >
+          roscoGameState.previousRecord && (
+          <Typography variant="body2" textAlign={"center"} color={"#4caf50"}>
+            ¡Nuevo record!
+          </Typography>
+        )}
         <Grid sx={{ display: "flex", flexDirection: "column" }}>
           <Typography sx={{ mt: 2 }} variant="h6" textAlign={"center"}>
             Puntuación

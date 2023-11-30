@@ -22,6 +22,7 @@ export interface RoscoGame {
   message: string;
   antonyms: string[];
   synonyms: string[];
+  previousRecord: number;
   disableAntonyms: boolean;
   disableSynonyms: boolean;
   disableLettersQty: boolean;
@@ -64,6 +65,7 @@ const useRosco = () => {
     answerText: "",
     definition: "",
     message: "",
+    previousRecord: -Infinity,
     antonyms: [],
     synonyms: [],
     disableAntonyms: false,
@@ -75,6 +77,11 @@ const useRosco = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   //Functions
+
+  const handleCloseSnackbar = () => {
+    setOpenSnackbar(false);
+  };
+
   const closeModal = () => {
     setRoscoGameState((prevState) => ({
       ...prevState,
@@ -212,7 +219,7 @@ const useRosco = () => {
       setRoscoGameState((prevState) => ({
         ...prevState,
         activeTimer: false,
-        counter: 27,
+        counter: 26,
       }));
       setIsModalOpen(true);
       return;
@@ -224,10 +231,16 @@ const useRosco = () => {
 
   useEffect(() => {
     if (roscoGameState.counter == 26) {
+      const localStorageRecord = window.localStorage.getItem("rosco");
+      const parsedRecord = localStorageRecord
+        ? JSON.parse(localStorageRecord)
+        : {};
+      const previousRecord = parsedRecord?.max;
       setRoscoGameState((prevState) => ({
         ...prevState,
         activeTimer: false,
         counter: 27,
+        previousRecord: previousRecord || -Infinity,
       }));
       dispatch(
         setRoscoScore(
@@ -240,7 +253,7 @@ const useRosco = () => {
         )
       );
       setIsModalOpen(true);
-    } else if (roscoGameState.activeTimer) {
+    } else if (roscoGameState.activeTimer && (roscoGameState.counter != 27)) {
       let data = [];
       const random = Math.floor(Math.random() * 4);
       data =
@@ -272,6 +285,7 @@ const useRosco = () => {
     handleSnackbar,
     handleEnterKey,
     roscoRecord,
+    handleCloseSnackbar,
   };
 };
 
