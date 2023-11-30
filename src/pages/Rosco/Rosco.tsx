@@ -158,7 +158,7 @@ const Rosco = () => {
                 setRoscoGameState((prevState) => ({
                   ...prevState,
                   activeTimer: true,
-                  timer: 10,
+                  timer: 300,
                   counter: 0,
                   correctAnswers: 0,
                   incorrectAnswers: 0,
@@ -229,7 +229,12 @@ const Rosco = () => {
           </Alert>
         </Snackbar>
         <RoscoModal
-          {...{ isModalOpen, roscoGameState, closeModal, roscoRecord }}
+          {...{
+            isModalOpen,
+            roscoGameState,
+            closeModal,
+            roscoRecord,
+          }}
         />
       </Grid>
     </Box>

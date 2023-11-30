@@ -54,7 +54,7 @@ const useFourChoicesGame = () => {
       current: 0,
       responseText: "",
       activeTimer: false,
-      timer: 60,
+      timer: 10,
       isModalOpen: false,
       reset: false,
       definition: "",
@@ -111,13 +111,14 @@ const useFourChoicesGame = () => {
     setFourChoicesState((prevState) => ({
       ...prevState,
       current: 0,
-      timer: 60,
+      timer: 10,
       activeTimer: false,
       reset: !fourChoicesState.reset,
       correctAnswers: 0,
       incorrectAnswers: 0,
       runningGame: true,
       responseText: "",
+      pastWords: []
     }));
   };
 
@@ -139,8 +140,9 @@ const useFourChoicesGame = () => {
         ...prevState,
         activeTimer: false,
         runningGame: false,
-        timer: 60,
+        timer: 10,
         definition: "",
+        pastWords: []
       }));
       const localStorageRecord = window.localStorage.getItem("fourChoices");
       const parsedRecord = localStorageRecord
@@ -187,7 +189,10 @@ const useFourChoicesGame = () => {
       const randomElement = data[Math.floor(Math.random() * data.length)];
       if (randomElement) {
         const palabraClave = Object.keys(randomElement)[0];
-        if (fourChoicesState.pastWords.includes(palabraClave)) {
+        console.log("pastWords",fourChoicesState.pastWords)
+        console.log("palabraClave",palabraClave)
+        if (fourChoicesState.pastWords.indexOf(palabraClave) != -1) {
+          console.log("Existe dentro del arreglo")
           continue;
         }
 
@@ -202,7 +207,7 @@ const useFourChoicesGame = () => {
               answerText: palabraClave,
               definition: definition,
               fourWords: cuatroPalabrasAleatorias,
-              pastWord: [...fourChoicesState.pastWords, palabraClave],
+              pastWords: [...fourChoicesState.pastWords, palabraClave],
             }));
           }
         }

@@ -44,7 +44,12 @@ const MathGame = () => {
                 borderColor: `${mathGameState.backgroundColor}`,
               }}
             >
-              {mathGameState.answerText}
+              {mathGameState.runningGame? mathGameState.answerText : (
+                <Loop
+                  fontSize="large"
+                  sx={{"&:hover": {cursor: "pointer"}}}
+                  onClick={() => handleReset()}
+                />)}
             </Grid>
           </Grid>
           <Grid sx={mathGameStyles.inputContainer}>

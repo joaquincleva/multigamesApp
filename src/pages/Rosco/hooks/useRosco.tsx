@@ -22,6 +22,7 @@ export interface RoscoGame {
   message: string;
   antonyms: string[];
   synonyms: string[];
+  previousRecord: number;
   disableAntonyms: boolean;
   disableSynonyms: boolean;
   disableLettersQty: boolean;
@@ -60,10 +61,11 @@ const useRosco = () => {
     incorrectAnswers: 0,
     responseText: "",
     activeTimer: false,
-    timer: 10,
+    timer: 300,
     answerText: "",
     definition: "",
     message: "",
+    previousRecord: -Infinity,
     antonyms: [],
     synonyms: [],
     disableAntonyms: false,
@@ -77,13 +79,13 @@ const useRosco = () => {
   //Functions
 
   const handleCloseSnackbar = () => {
-    setOpenSnackbar(false)
-  }
+    setOpenSnackbar(false);
+  };
 
   const closeModal = () => {
     setRoscoGameState((prevState) => ({
       ...prevState,
-      timer: 10,
+      timer: 300,
       counter: 0,
       correctAnswers: 0,
       incorrectAnswers: 0,
@@ -217,7 +219,7 @@ const useRosco = () => {
       setRoscoGameState((prevState) => ({
         ...prevState,
         activeTimer: false,
-        counter: 27,
+        counter: 26,
       }));
       setIsModalOpen(true);
       return;
@@ -229,10 +231,16 @@ const useRosco = () => {
 
   useEffect(() => {
     if (roscoGameState.counter == 26) {
+      const localStorageRecord = window.localStorage.getItem("rosco");
+      const parsedRecord = localStorageRecord
+        ? JSON.parse(localStorageRecord)
+        : {};
+      const previousRecord = parsedRecord?.max;
       setRoscoGameState((prevState) => ({
         ...prevState,
         activeTimer: false,
         counter: 27,
+        previousRecord: previousRecord || -Infinity,
       }));
       dispatch(
         setRoscoScore(
@@ -245,7 +253,7 @@ const useRosco = () => {
         )
       );
       setIsModalOpen(true);
-    } else if (roscoGameState.activeTimer) {
+    } else if (roscoGameState.activeTimer && (roscoGameState.counter != 27)) {
       let data = [];
       const random = Math.floor(Math.random() * 4);
       data =
@@ -277,7 +285,7 @@ const useRosco = () => {
     handleSnackbar,
     handleEnterKey,
     roscoRecord,
-    handleCloseSnackbar
+    handleCloseSnackbar,
   };
 };
 

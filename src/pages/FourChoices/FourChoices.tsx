@@ -2,7 +2,7 @@ import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 import { Col, ConfigProvider, Progress } from "antd";
 import { Loop } from "@mui/icons-material";
 import FourChoicesModal from "./components/FourChoicesModal";
-import useMathGame from "./hook/useFourChoicesGame";
+import useFourChoices from "./hook/useFourChoicesGame";
 import { fourChoicesStyles } from "./styles/FourChoices.styles";
 
 const FourChoices = () => {
@@ -14,7 +14,7 @@ const FourChoices = () => {
     handleEnterKey,
     handleReset,
     closeModal,
-  } = useMathGame();
+  } = useFourChoices();
 
   return (
     <Box sx={fourChoicesStyles.boxContainer}>
@@ -23,14 +23,11 @@ const FourChoices = () => {
           <Grid container id="wordsContainer" sx={{ width: "100%" }}>
             <Grid item xs={12} sx={{ ...fourChoicesStyles.ecuationContainer }}>
               {fourChoicesState.definition || (
-                <Button
-                  sx={{ color: "grey" }}
-                  size="large"
+                <Loop
+                  fontSize="large"
+                  sx={{ "&:hover": { cursor: "pointer" } }}
                   onClick={() => handleReset()}
-                  variant="text"
-                >
-                  Reiniciar juego
-                </Button>
+                />
               )}
             </Grid>
           </Grid>
@@ -61,17 +58,14 @@ const FourChoices = () => {
                         bgcolor: `${
                           !fourChoicesState.sendedAnswer
                             ? "#2979ff"
-                            : item.toLowerCase() === fourChoicesState.answerText.toLowerCase()
+                            : item.toLowerCase() ===
+                              fourChoicesState.answerText.toLowerCase()
                             ? "#4caf50"
                             : "#f44336"
                         }`,
                       },
                     }}
                     onClick={() => {
-                      console.log(item );
-                      console.log(fourChoicesState.answerText);
-                      
-                      
                       handleEnterKey(item);
                     }}
                     fullWidth
@@ -92,7 +86,13 @@ const FourChoices = () => {
             </Button>
           </Grid>
         </Grid>
-        <Grid item container xs={12} md={4} sx={fourChoicesStyles.rightSideContainer}>
+        <Grid
+          item
+          container
+          xs={12}
+          md={4}
+          sx={fourChoicesStyles.rightSideContainer}
+        >
           <Grid>
             <Col>
               <ConfigProvider
