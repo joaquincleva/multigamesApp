@@ -54,7 +54,7 @@ const useFourChoicesGame = () => {
       current: 0,
       responseText: "",
       activeTimer: false,
-      timer: 10,
+      timer: 60,
       isModalOpen: false,
       reset: false,
       definition: "",
@@ -111,7 +111,7 @@ const useFourChoicesGame = () => {
     setFourChoicesState((prevState) => ({
       ...prevState,
       current: 0,
-      timer: 10,
+      timer: 60,
       activeTimer: false,
       reset: !fourChoicesState.reset,
       correctAnswers: 0,
@@ -140,7 +140,7 @@ const useFourChoicesGame = () => {
         ...prevState,
         activeTimer: false,
         runningGame: false,
-        timer: 10,
+        timer: 60,
         definition: "",
         pastWords: []
       }));

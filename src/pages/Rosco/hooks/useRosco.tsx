@@ -273,6 +273,16 @@ const useRosco = () => {
     //eslint-disable-next-line
   }, [roscoGameState.counter, i18n.language, roscoGameState.activeTimer]);
 
+  useEffect(() => {
+      setRoscoGameState((prevState) => ({
+        ...prevState,
+        activeTimer: false,
+        timer: 300,
+        counter: 0,
+      }));
+    //eslint-disable-next-line
+  }, [i18n.language]);
+
   return {
     roscoGameState,
     setRoscoGameState,
