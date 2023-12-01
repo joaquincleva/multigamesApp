@@ -195,7 +195,7 @@ const useRosco = () => {
     let array = [...roscoGameState.resultsArray];
     if (!roscoGameState.counter) {
       for (let i = 0; i < 26; i++) {
-        array[i] = "#2979ff";
+        array[i] = "#0288d1";
       }
       array[0] = "#ffeb3b";
       setRoscoGameState((prevState) => ({

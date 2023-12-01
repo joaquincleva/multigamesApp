@@ -6,7 +6,7 @@ interface HelpButtonsProps {
   handleSnackbar: (arg0: string) => void;
   handleSnackbarText: string;
   buttonText: string;
-  timer: number
+  timer: number;
 }
 
 const HelpButtons = ({
@@ -17,13 +17,23 @@ const HelpButtons = ({
   buttonText,
 }: HelpButtonsProps) => {
   return (
-    <Tooltip title={`${disabled ? "Ya has usado este recurso" : timer <= 5 ? "Tienes menos de 5 segundos": ""}`}>
+    <Tooltip
+      title={`${
+        disabled
+          ? "Ya has usado este recurso"
+          : timer <= 5
+          ? "Tienes menos de 5 segundos"
+          : ""
+      }`}
+    >
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/* @ts-ignore */}
       <Button
         sx={roscoGameStyles.helpButton}
         variant="contained"
         disableElevation
-        color={`${disabled || (timer<=5)? "error" : "info"}`}
-        onClick={disabled ? () => {} : handleSnackbar(handleSnackbarText)}
+        color={`${disabled || timer <= 5 ? "error" : "info"}`}
+        onClick={disabled? () => {} : handleSnackbar(handleSnackbarText)}
       >
         {buttonText}
       </Button>

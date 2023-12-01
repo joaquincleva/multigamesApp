@@ -19,7 +19,6 @@ const FourChoicesModal = ({
   fourChoicesRecord,
 }: FourChoicesModalProps) => {
   useEffect(() => {
-    console.log(previousRecord);
   }, [previousRecord]);
   return (
     <Modal

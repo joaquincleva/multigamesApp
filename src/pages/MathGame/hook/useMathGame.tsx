@@ -125,7 +125,6 @@ const useMathGame = () => {
 
   useEffect(() => {
     if (mathGameStats.results.length != 0) {
-      console.log(mathGameStats);
       handleLocalStorage("set", "mathGame", mathGameStats);
     }
   }, [mathGameStats]);
@@ -153,7 +152,6 @@ const useMathGame = () => {
 
       const expression = `${num1} ${operator1} ${num2} ${operator2} ${num3} ${operator3} ${num4}`;
       const result = eval(expression);
-      console.log(result);
       if (Number.isInteger(result) && Number.isInteger(result)) {
         boolean = false;
         setMathGameState((prevState) => ({

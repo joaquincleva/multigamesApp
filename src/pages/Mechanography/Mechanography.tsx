@@ -162,7 +162,7 @@ const Mechanography = () => {
                   success={{ percent: 0, strokeColor: "#fff" }}
                   type="circle"
                   className=""
-                  strokeColor={"#2979ff"}
+                  strokeColor={"#0288d1"}
                   trailColor={"lightGrey"}
                   style={mechanographyGameStyles.progressStyle}
                   percent={100 - 100 * (mechanographyGameState.timer / 60)}

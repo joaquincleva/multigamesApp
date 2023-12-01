@@ -17,7 +17,6 @@ const MechanographyModal = ({
   mechanographyRecord,
   previousRecord
 }: RoscoModalProps) => {
-  console.log(previousRecord);
   
   return (
     <Modal

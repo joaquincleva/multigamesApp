@@ -117,7 +117,7 @@ const MathGame = () => {
                   success={{ percent: 0, strokeColor: "#fff" }}
                   type="circle"
                   className=""
-                  strokeColor={"#2979ff"}
+                  strokeColor={"#0288d1"}
                   trailColor={"lightGrey"}
                   style={mathGameStyles.progressStyle}
                   percent={100 - 100 * (mathGameState.timer / 60)}

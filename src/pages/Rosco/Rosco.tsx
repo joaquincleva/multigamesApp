@@ -51,7 +51,7 @@ const Rosco = () => {
                   success={{ percent: 0, strokeColor: "#fff" }}
                   type="circle"
                   className=""
-                  strokeColor={"#2979ff"}
+                  strokeColor={"#0288d1"}
                   trailColor={"lightGrey"}
                   style={{
                     ...roscoGameStyles.progress,

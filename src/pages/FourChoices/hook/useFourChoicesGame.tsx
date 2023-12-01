@@ -167,7 +167,6 @@ const useFourChoicesGame = () => {
 
   useEffect(() => {
     if (fourChoicesStats.results.length != 0) {
-      console.log(fourChoicesStats);
       handleLocalStorage("set", "fourChoices", fourChoicesStats);
     }
   }, [fourChoicesStats]);
@@ -189,10 +188,7 @@ const useFourChoicesGame = () => {
       const randomElement = data[Math.floor(Math.random() * data.length)];
       if (randomElement) {
         const palabraClave = Object.keys(randomElement)[0];
-        console.log("pastWords",fourChoicesState.pastWords)
-        console.log("palabraClave",palabraClave)
         if (fourChoicesState.pastWords.indexOf(palabraClave) != -1) {
-          console.log("Existe dentro del arreglo")
           continue;
         }
 

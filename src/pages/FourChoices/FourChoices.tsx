@@ -49,7 +49,7 @@ const FourChoices = () => {
                     sx={{
                       bgcolor: `${
                         !fourChoicesState.sendedAnswer
-                          ? "#2979ff"
+                          ? "#0288d1"
                           : item === fourChoicesState.answerText
                           ? "#4caf50"
                           : "#f44336"
@@ -57,7 +57,7 @@ const FourChoices = () => {
                       "&:hover": {
                         bgcolor: `${
                           !fourChoicesState.sendedAnswer
-                            ? "#2979ff"
+                            ? "#0288d1"
                             : item.toLowerCase() ===
                               fourChoicesState.answerText.toLowerCase()
                             ? "#4caf50"
@@ -79,7 +79,7 @@ const FourChoices = () => {
               fullWidth
               variant="contained"
               color="info"
-              sx={{ borderRadius: "5px", marginX: "10px", bgcolor: "#2979ff" }}
+              sx={{ borderRadius: "5px", marginX: "10px", bgcolor: "#0288d1" }}
               onClick={handleReset}
             >
               <Loop fontSize="large" />
@@ -109,7 +109,7 @@ const FourChoices = () => {
                   success={{ percent: 0, strokeColor: "#fff" }}
                   type="circle"
                   className=""
-                  strokeColor={"#2979ff"}
+                  strokeColor={"#0288d1"}
                   trailColor={"lightGrey"}
                   style={fourChoicesStyles.progressStyle}
                   percent={100 - 100 * (fourChoicesState.timer / 60)}

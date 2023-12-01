@@ -5,8 +5,6 @@ import {
   FormControl,
   InputLabel,
   MenuItem,
-  Paper,
-  Card,
   Box,
   Typography,
   Button,
@@ -25,7 +23,6 @@ import {
   Calculate,
   Flaky,
   Keyboard,
-  Loop,
 } from "@mui/icons-material";
 import { NavLink } from "react-router-dom";
 
@@ -117,16 +114,7 @@ export default function Dashboard() {
   
   const {mode} = useTheme().palette
 
-  console.log("mode: ",mode);
-  
-
-  function filterData(data: any) {
-    const transformedData = data.map((item: any) => ({
-      date: new Date(item.date),
-      score: item.score,
-    }));
-
-    const currentDate = new Date();
+  const currentDate = new Date();
     const dayNames = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
     const monthNames = [
       "Enero",
@@ -142,6 +130,13 @@ export default function Dashboard() {
       "Noviembre",
       "Diciembre",
     ];
+  
+
+  function filterData(data: any) {
+    const transformedData = data.map((item: any) => ({
+      date: new Date(item.date),
+      score: item.score,
+    }));
 
     let result: any[];
 
@@ -159,8 +154,6 @@ export default function Dashboard() {
       default:
         result = [];
     }
-    console.log(result);
-
     return [["", ""], ...result];
   }
 
@@ -268,11 +261,6 @@ export default function Dashboard() {
     }
     //eslint-disable-next-line
   }, [dateFrame]);
-
-  console.log("roscoData: ", roscoData);
-  console.log("mechanographyData: ", mechanographyData);
-  console.log("fourChoicesData: ", fourChoicesData);
-  console.log("mathGameData: ", mathGameData);
 
   return (
     <Box

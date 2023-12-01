@@ -169,7 +169,6 @@ const useMechanography = () => {
       const parsedRecord = localStorageRecord
         ? JSON.parse(localStorageRecord)
         : {};
-      console.log(parsedRecord?.max);
 
       setMechanographyGameState((prevState) => ({
         ...prevState,
