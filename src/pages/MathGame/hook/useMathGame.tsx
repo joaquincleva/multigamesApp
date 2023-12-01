@@ -53,7 +53,7 @@ const useMathGame = () => {
       } else {
         setMathGameState((prevState) => ({
           ...prevState,
-          incorrectAnswers: mathGameState.correctAnswers + 1,
+          incorrectAnswers: mathGameState.incorrectAnswers + 1,
           backgroundColor: "#f6685e",
         }));
       }
