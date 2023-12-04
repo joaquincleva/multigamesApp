@@ -1,12 +1,11 @@
-import { useTheme } from "@mui/material";
 import { useEffect, useState, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AppStore } from "../../../redux/store";
+import { AppStore } from "@redux/store";
 import {
   setMathGameScore,
   setMathGameStats,
-} from "../../../redux/states/mathGameState";
-import { handleLocalStorage } from "../../../utils/handleLocalStorage";
+} from "@redux/states/mathGameState";
+import { handleLocalStorage } from "@utils/handleLocalStorage";
 
 const useMathGame = () => {
   const [mathGameState, setMathGameState] = useState({
@@ -27,7 +26,6 @@ const useMathGame = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const mode = useTheme().palette.mode;
   const dispatch = useDispatch();
 
   const mathGameStats = useSelector((state: AppStore) => state.mathGame);
@@ -173,7 +171,6 @@ const useMathGame = () => {
     setMathGameState,
     isModalOpen,
     setIsModalOpen,
-    mode,
     mathGameStats,
     mathGameRecord,
     handleEnterKey,

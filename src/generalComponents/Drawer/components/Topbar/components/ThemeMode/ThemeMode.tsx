@@ -2,18 +2,14 @@ import { Box, IconButton, Tooltip, useTheme } from "@mui/material";
 import React from "react";
 import { ColorModeContext } from "../../../../../../theme";
 import { Brightness2, Brightness7 } from "@mui/icons-material";
+import { ResponsiveDrawerStyles } from "../../../../styles/ResponsiveDrawer.styles";
 
 const ThemeMode = () => {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
   return (
     <Box
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        color: "text.primary",
-      }}
+      sx={ResponsiveDrawerStyles().themeContainer}
     >
       <Tooltip title={`${theme.palette.mode === "dark" ? "Modo claro":"Modo oscuro"}`}>
         <IconButton onClick={colorMode.toggleColorMode} color="primary">

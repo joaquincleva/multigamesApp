@@ -1,15 +1,16 @@
-import { Box, Button, Divider, Grid, Typography } from "@mui/material";
-import { Col, ConfigProvider, Progress } from "antd";
+import { Box, Button, Grid } from "@mui/material";
 import { Loop } from "@mui/icons-material";
 import FourChoicesModal from "./components/FourChoicesModal";
 import useFourChoices from "./hook/useFourChoicesGame";
 import { fourChoicesStyles } from "./styles/FourChoices.styles";
+import { commonStyles } from "@styles/commonStyles";
+import SelfProgress from "@generalComponents/SelfProgress";
+import Score from "@generalComponents/Score";
 
 const FourChoices = () => {
   const {
     fourChoicesState,
     isModalOpen,
-    mode,
     fourChoicesRecord,
     handleEnterKey,
     handleReset,
@@ -17,11 +18,11 @@ const FourChoices = () => {
   } = useFourChoices();
 
   return (
-    <Box sx={fourChoicesStyles.boxContainer}>
-      <Grid container sx={fourChoicesStyles.gridContainer}>
-        <Grid item xs={12} md={8} sx={fourChoicesStyles.leftSideContainer}>
+    <Box sx={commonStyles().boxContainer}>
+      <Grid container sx={commonStyles().gridContainer}>
+        <Grid item xs={12} md={8} sx={commonStyles().leftSideContainer}>
           <Grid container id="wordsContainer" sx={{ width: "100%" }}>
-            <Grid item xs={12} sx={{ ...fourChoicesStyles.ecuationContainer }}>
+            <Grid item xs={12} sx={fourChoicesStyles().ecuationContainer}>
               {fourChoicesState.definition || (
                 <Loop
                   fontSize="large"
@@ -31,11 +32,7 @@ const FourChoices = () => {
               )}
             </Grid>
           </Grid>
-          <Grid
-            sx={{ ...fourChoicesStyles.inputContainer }}
-            display={"flex"}
-            container
-          >
+          <Grid sx={fourChoicesStyles().inputContainer} container>
             {fourChoicesState.runningGame &&
               fourChoicesState.fourWords.map((item) => (
                 <Grid
@@ -46,25 +43,14 @@ const FourChoices = () => {
                 >
                   <Button
                     color="info"
-                    sx={{
-                      bgcolor: `${
-                        !fourChoicesState.sendedAnswer
-                          ? "#0288d1"
-                          : item === fourChoicesState.answerText
-                          ? "#4caf50"
-                          : "#f44336"
-                      }`,
-                      "&:hover": {
-                        bgcolor: `${
-                          !fourChoicesState.sendedAnswer
-                            ? "#0288d1"
-                            : item.toLowerCase() ===
-                              fourChoicesState.answerText.toLowerCase()
-                            ? "#4caf50"
-                            : "#f44336"
-                        }`,
-                      },
-                    }}
+                    sx={
+                      fourChoicesStyles(
+                        !fourChoicesState.sendedAnswer,
+                        item,
+                        fourChoicesState.answerText,
+                        fourChoicesState.answerText.toLowerCase()
+                      ).resetButtonInText
+                    }
                     onClick={() => {
                       handleEnterKey(item);
                     }}
@@ -91,53 +77,26 @@ const FourChoices = () => {
           container
           xs={12}
           md={4}
-          sx={fourChoicesStyles.rightSideContainer}
+          sx={fourChoicesStyles().rightSideContainer}
         >
-          <Grid>
-            <Col>
-              <ConfigProvider
-                theme={{
-                  components: {
-                    Progress: {
-                      circleTextColor: `${mode == "light" ? "black" : "white"}`,
-                    },
-                  },
-                }}
-              >
-                <Progress
-                  size={150}
-                  success={{ percent: 0, strokeColor: "#fff" }}
-                  type="circle"
-                  className=""
-                  strokeColor={"#0288d1"}
-                  trailColor={"lightGrey"}
-                  style={fourChoicesStyles.progressStyle}
-                  percent={100 - 100 * (fourChoicesState.timer / 60)}
-                  format={() =>
-                    `${Math.floor(fourChoicesState.timer / 60)}:${
-                      fourChoicesState.timer % 60 < 10
-                        ? "0" + (fourChoicesState.timer % 60)
-                        : fourChoicesState.timer % 60
-                    }`
-                  }
-                />
-              </ConfigProvider>
-            </Col>
-          </Grid>
-          <Grid sx={{ width: "75%", mb: 3 }}>
-            <Grid display={"flex"} sx={{ justifyContent: "space-between" }}>
-              <Typography variant="h6">Record: </Typography>
-              <Typography variant="h6">{fourChoicesRecord}</Typography>
-            </Grid>
-            <Divider />
-            <Grid display={"flex"} sx={{ justifyContent: "space-between" }}>
-              <Typography variant="h6">Puntuación Actual: </Typography>
-              <Typography variant="h6">
-                {fourChoicesState.correctAnswers -
-                  fourChoicesState.incorrectAnswers}
-              </Typography>
-            </Grid>
-          </Grid>
+          <SelfProgress
+            format={`${Math.floor(fourChoicesState.timer / 60)}:${
+              fourChoicesState.timer % 60 < 10
+                ? "0" + (fourChoicesState.timer % 60)
+                : fourChoicesState.timer % 60
+            }`}
+            percent={100 - 100 * (fourChoicesState.timer / 60)}
+            style={commonStyles().progressStyle}
+            size={150}
+          />
+          <Score
+            gridStyles={{ width: "75%", mb: 3 }}
+            record={fourChoicesRecord}
+            actualScore={
+              fourChoicesState.correctAnswers -
+              fourChoicesState.incorrectAnswers
+            }
+          />
         </Grid>
       </Grid>
       <FourChoicesModal

@@ -1,5 +1,5 @@
 import { Button, Tooltip } from "@mui/material";
-import { roscoGameStyles } from "../styles/roscoGame.styles";
+import { commonStyles } from "@styles/commonStyles";
 
 interface HelpButtonsProps {
   disabled: boolean;
@@ -29,7 +29,7 @@ const HelpButtons = ({
       {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
       {/* @ts-ignore */}
       <Button
-        sx={roscoGameStyles.helpButton}
+        sx={commonStyles().width100}
         variant="contained"
         disableElevation
         color={`${disabled || timer <= 5 ? "error" : "info"}`}

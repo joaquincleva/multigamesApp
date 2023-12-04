@@ -3,12 +3,9 @@ import { useTranslation } from "react-i18next";
 import { useState, useEffect, useCallback } from "react";
 import roscoGameData from "../gameData/gameData.json";
 import { useDispatch, useSelector } from "react-redux";
-import { AppStore } from "../../../redux/store";
-import {
-  setRoscoScore,
-  setRoscoStats,
-} from "../../../redux/states/roscoReduxState";
-import { handleLocalStorage } from "../../../utils/handleLocalStorage";
+import { AppStore } from "@redux/store";
+import { handleLocalStorage } from "@utils/handleLocalStorage";
+import { setRoscoScore, setRoscoStats } from "@redux/states/roscoReduxState";
 
 export interface RoscoGame {
   counter: number;

@@ -1,6 +1,6 @@
 import { Box, Divider, Grid, Modal, Typography } from "@mui/material";
-import { roscoGameStyles } from "../styles/roscoGame.styles";
 import { RoscoGame } from "../hooks/useRosco";
+import { commonStyles } from "@styles/commonStyles";
 
 interface RoscoModalProps {
   isModalOpen: boolean;
@@ -22,7 +22,7 @@ const RoscoModal = ({
       aria-labelledby="modal-title"
       aria-describedby="modal-description"
     >
-      <Box sx={roscoGameStyles.resultsModal}>
+      <Box sx={commonStyles().displayFlex}>
         <Typography variant="h5" textAlign={"center"}>
           {roscoGameState.correctAnswers == 26
             ? "Felicitaciones! Has completado el rosco"

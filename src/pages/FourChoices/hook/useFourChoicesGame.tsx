@@ -1,12 +1,12 @@
 import { useTheme } from "@mui/material";
 import { useEffect, useState, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AppStore } from "../../../redux/store";
+import { AppStore } from "@redux/store";
 import {
   setFourChoicesScore,
   setFourChoicesStats,
-} from "../../../redux/states/fourChoicesState";
-import { handleLocalStorage } from "../../../utils/handleLocalStorage";
+} from "@redux/states/fourChoicesState";
+import { handleLocalStorage } from "@utils/handleLocalStorage";
 import gameData from "../gameData/gameData.json";
 import { useTranslation } from "react-i18next";
 
@@ -118,7 +118,7 @@ const useFourChoicesGame = () => {
       incorrectAnswers: 0,
       runningGame: true,
       responseText: "",
-      pastWords: []
+      pastWords: [],
     }));
   };
 
@@ -142,7 +142,7 @@ const useFourChoicesGame = () => {
         runningGame: false,
         timer: 60,
         definition: "",
-        pastWords: []
+        pastWords: [],
       }));
       const localStorageRecord = window.localStorage.getItem("fourChoices");
       const parsedRecord = localStorageRecord
