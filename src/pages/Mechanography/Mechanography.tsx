@@ -1,17 +1,11 @@
-import {
-  Box,
-  Button,
-  Divider,
-  FormControl,
-  Grid,
-  TextField,
-  Typography,
-} from "@mui/material";
-import { Col, ConfigProvider, Progress } from "antd";
-import { Loop } from "@mui/icons-material";
+import { Box, FormControl, Grid, TextField } from "@mui/material";
 import MechanographyModal from "./components/MechanographyModal";
 import useMechanography from "./hook/useMechanography";
 import { mechanographyGameStyles } from "./styles/MechanographyGame.styles";
+import { commonStyles } from "../../styles/commonStyles";
+import SelfProgress from "../../generalComponents/SelfProgress";
+import Score from "../../generalComponents/Score";
+import ResetButton from "../../generalComponents/ResetButton";
 
 const Mechanography = () => {
   const {
@@ -26,68 +20,34 @@ const Mechanography = () => {
   } = useMechanography();
 
   return (
-    <Box sx={mechanographyGameStyles.boxContainer}>
-      <Grid container sx={mechanographyGameStyles.gridContainer}>
-        <Grid
-          item
-          xs={12}
-          md={8}
-          sx={mechanographyGameStyles.leftSideContainer}
-        >
-          <Grid
-            container
-            id="wordsContainer"
-            sx={{
-              width: "100%",
-            }}
-          >
+    <Box sx={commonStyles().boxContainer}>
+      <Grid container sx={commonStyles().gridContainer}>
+        <Grid item xs={12} md={8} sx={commonStyles().leftSideContainer}>
+          <Grid container id="wordsContainer" sx={commonStyles().width100}>
             <Grid
               item
               xs={12}
-              sx={mechanographyGameStyles.wordsArrayContainerFather}
+              sx={mechanographyGameStyles().wordsArrayContainerFather}
             >
               <Grid
                 sx={{
-                  ...mechanographyGameStyles.wordsArrayContainerChild,
-                  bottom: `${mechanographyGameState.lines * 2.175}em`,
+                  ...mechanographyGameStyles(mechanographyGameState.lines)
+                    .wordsArrayContainerChild,
                 }}
               >
                 {mechanographyGameState.wordsArray.map((item, index) => (
                   <span
                     key={index}
                     style={{
-                      ...mechanographyGameStyles.wordsArray,
-                      backgroundColor: `${
-                        index == mechanographyGameState.current &&
-                        item == mechanographyGameState.responseText.trim()
-                          ? "#6fbf73"
-                          : index == mechanographyGameState.current &&
-                            !item.startsWith(
-                              mechanographyGameState.responseText.trim()
-                            )
-                          ? "pink"
-                          : mode == "dark" &&
-                            index == mechanographyGameState.current
-                          ? "#333"
-                          : mode == "light" &&
-                            index == mechanographyGameState.current
-                          ? "lightgray"
-                          : ""
-                      }`,
-                      color: `${
-                        index == mechanographyGameState.current &&
-                        !item.startsWith(
-                          mechanographyGameState.responseText.trim()
-                        )
-                          ? "black"
-                          : mechanographyGameState.answerArray[index] === 0
-                          ? "#ab003c"
-                          : mechanographyGameState.answerArray[index] === 1
-                          ? "#357a38"
-                          : mode == "dark"
-                          ? "white"
-                          : "black"
-                      }`,
+                      ...mechanographyGameStyles(
+                        0,
+                        index,
+                        mechanographyGameState.current,
+                        item,
+                        mechanographyGameState.responseText,
+                        mode,
+                        mechanographyGameState.answerArray
+                      ).wordsArray,
                     }}
                   >
                     {item}
@@ -96,13 +56,8 @@ const Mechanography = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid sx={{ width: "100%", margin: "0px", display: "flex", gap: 2 }}>
-            <FormControl
-              fullWidth
-              sx={{
-                display: "flex",
-              }}
-            >
+          <Grid sx={mechanographyGameStyles().formControlContaienr}>
+            <FormControl fullWidth sx={commonStyles().displayFlex}>
               <TextField
                 disabled={!mechanographyGameState.runningGame}
                 fullWidth
@@ -121,81 +76,41 @@ const Mechanography = () => {
                   handleEnterKey(e.key);
                 }}
                 inputProps={{
-                  style: {
-                    fontSize: "30px",
-                    letterSpacing: "3px",
-                  },
+                  style: mechanographyGameStyles().input,
                 }}
-                sx={{ width: "100%" }}
+                sx={commonStyles().width100}
               ></TextField>
             </FormControl>
-
-            <Button
-              variant="contained"
-              color="info"
-              sx={{ borderRadius: "5px", width: "15%" }}
-              onClick={handleReset}
-            >
-              <Loop fontSize="large" />
-            </Button>
+            <ResetButton
+              resetStyles={commonStyles().resetButtonSmall}
+              handleReset={handleReset}
+            />
           </Grid>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={4}
-          sx={mechanographyGameStyles.rightSideContainer}
-        >
-          <Grid>
-            <Col>
-              <ConfigProvider
-                theme={{
-                  components: {
-                    Progress: {
-                      circleTextColor: `${mode == "light" ? "black" : "white"}`,
-                    },
-                  },
-                }}
-              >
-                <Progress
-                  size={150}
-                  success={{ percent: 0, strokeColor: "#fff" }}
-                  type="circle"
-                  className=""
-                  strokeColor={"#2979ff"}
-                  trailColor={"lightGrey"}
-                  style={mechanographyGameStyles.progressStyle}
-                  percent={100 - 100 * (mechanographyGameState.timer / 60)}
-                  format={() =>
-                    `${Math.floor(mechanographyGameState.timer / 60)}:${
-                      mechanographyGameState.timer % 60 < 10
-                        ? "0" + (mechanographyGameState.timer % 60)
-                        : mechanographyGameState.timer % 60
-                    }`
-                  }
-                />
-              </ConfigProvider>
-            </Col>
-          </Grid>
-          <Grid sx={{ width: "75%", mb: 1 }}>
-            <Grid display={"flex"} sx={{ justifyContent: "space-between" }}>
-              <Typography variant="h6">Record: </Typography>
-              <Typography variant="h6">{mechanographyRecord}</Typography>
-            </Grid>
-            <Divider />
-            <Grid display={"flex"} sx={{ justifyContent: "space-between" }}>
-              <Typography variant="h6">Puntuación Actual: </Typography>
-              <Typography variant="h6">
-                {mechanographyGameState.answerArray.reduce(
-                  (acc, val) => acc + val,
-                  0
-                ) -
-                  mechanographyGameState.answerArray
-                    .slice(0, mechanographyGameState.current + 1)
-                    .filter((num) => num === 0).length}
-              </Typography>
-            </Grid>
-          </Grid>
+        <Grid item xs={12} md={4} sx={commonStyles().rightSideContainer}>
+          <SelfProgress
+            size={150}
+            style={commonStyles().progressStyle}
+            format={`${Math.floor(mechanographyGameState.timer / 60)}:${
+              mechanographyGameState.timer % 60 < 10
+                ? "0" + (mechanographyGameState.timer % 60)
+                : mechanographyGameState.timer % 60
+            }`}
+            percent={100 - 100 * (mechanographyGameState.timer / 60)}
+          />
+          <Score
+            gridStyles={{ width: "75%", mb: 1 }}
+            actualScore={
+              mechanographyGameState.answerArray.reduce(
+                (acc, val) => acc + val,
+                0
+              ) -
+              mechanographyGameState.answerArray
+                .slice(0, mechanographyGameState.current + 1)
+                .filter((num) => num === 0).length
+            }
+            record={mechanographyRecord}
+          />
         </Grid>
       </Grid>
       <MechanographyModal
@@ -211,7 +126,7 @@ const Mechanography = () => {
             .filter((num) => num === 0).length
         }
         mechanographyRecord={mechanographyRecord}
-        previousRecord= {mechanographyGameState.previousRecord}
+        previousRecord={mechanographyGameState.previousRecord}
       />
     </Box>
   );

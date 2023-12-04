@@ -1,9 +1,10 @@
-import { Box, CssBaseline, Drawer, Grid, Toolbar } from "@mui/material";
+import { Box, CssBaseline, Drawer, Toolbar } from "@mui/material";
 import { useState, useEffect } from "react";
 import React from "react";
 import { useTheme } from "@mui/material";
 import Topbar from "./components/Topbar/Topbar";
 import ContentDrawer from "./components/ContentDrawer/ContentDrawer";
+import { ResponsiveDrawerStyles } from "./styles/ResponsiveDrawer.styles";
 
 interface ResponsiveDrawerProps {
   children: React.ReactNode;
@@ -53,7 +54,7 @@ const ResponsiveDrawer = ({ children }: ResponsiveDrawerProps) => {
   });
 
   return (
-    <Box sx={{ display: "flex", width: "100%", height: "100% !important" }}>
+    <Box sx={ResponsiveDrawerStyles().drawerContainer}>
       <CssBaseline />
       <Topbar
         {...{

@@ -5,6 +5,7 @@ import {
 import { AppBar, Grid, IconButton, Toolbar, Typography } from "@mui/material";
 import PopUpTopbar from "./PopUpTopbar/PopUpTopbar";
 import ThemeMode from "./components/ThemeMode/ThemeMode";
+import { ResponsiveDrawerStyles } from "../../styles/ResponsiveDrawer.styles";
 
 interface TopbarProps {
   windowWidth: number;
@@ -24,15 +25,7 @@ const Topbar = ({
   const currentBreakpoint = useGetCurrentBreakpoint(windowWidth);
 
   return (
-    <AppBar
-      position="fixed"
-      sx={{
-        display: "flex",
-        boxShadow: "none",
-        borderBottom: 2,
-      }}
-      color="inherit"
-    >
+    <AppBar sx={ResponsiveDrawerStyles().appbarContainer} color="inherit">
       <Toolbar
         sx={{
           display: "flex",
@@ -76,10 +69,13 @@ const Topbar = ({
             />
           )}
         </IconButton>
-        <Grid sx={{width: "100%", justifyItems: "start", display:"flex", ml: 3}}>
-          <Typography fontWeight={500} fontSize={currentBreakpoint == "xs" ||
-          currentBreakpoint == "sm"?25:42} sx={{fontFamily: "'Montserrat Subrayada', sans-serif"}}>
-              Multigames App
+        <Grid sx={ResponsiveDrawerStyles().appbarTitleContainer}>
+          <Typography
+            fontWeight={500}
+            fontSize={ResponsiveDrawerStyles().appbarTitle}
+            sx={ResponsiveDrawerStyles().appBarTitleFont}
+          >
+            Multigames App
           </Typography>
         </Grid>
         <Grid display="flex">

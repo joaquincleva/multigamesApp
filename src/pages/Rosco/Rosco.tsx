@@ -1,4 +1,3 @@
-import { Col, ConfigProvider } from "antd";
 import {
   Alert,
   Avatar,
@@ -10,11 +9,12 @@ import {
   Typography,
 } from "@mui/material";
 import Snackbar from "@mui/material/Snackbar";
-import { Progress } from "antd";
 import { roscoGameStyles } from "./styles/roscoGame.styles";
 import HelpButtons from "./components/HelpButtons";
 import useRosco from "./hooks/useRosco";
 import RoscoModal from "./components/RoscoModal";
+import { commonStyles } from "@styles/commonStyles";
+import SelfProgress from "@generalComponents/SelfProgress";
 
 const Rosco = () => {
   const {
@@ -32,48 +32,25 @@ const Rosco = () => {
   } = useRosco();
 
   return (
-    <Box sx={roscoGameStyles.boxContainer}>
-      <Grid container sx={roscoGameStyles.gridContainer}>
-        <Grid item xs={12} md={3} sx={roscoGameStyles.leftSide}>
-          <Grid>
-            <Col>
-              <ConfigProvider
-                theme={{
-                  components: {
-                    Progress: {
-                      circleTextColor: `${mode == "light" ? "black" : "white"}`,
-                    },
-                  },
-                }}
-              >
-                <Progress
-                  size={window.innerWidth <= 576 ? "small" : 200}
-                  success={{ percent: 0, strokeColor: "#fff" }}
-                  type="circle"
-                  className=""
-                  strokeColor={"#2979ff"}
-                  trailColor={"lightGrey"}
-                  style={{
-                    ...roscoGameStyles.progress,
-                    zIndex: `${window.innerWidth <= 576 ? 4 : 0}`,
-                    right: `${window.innerWidth <= 576 ? "15px" : "0"}`,
-                    bottom: `${window.innerWidth <= 576 ? "225px" : "0"}`,
-                    position: `${
-                      window.innerWidth <= 576 ? "fixed" : "relative"
-                    }`,
-                  }}
-                  percent={100 - 100 * (roscoGameState.timer / 300)}
-                  format={() =>
-                    `${Math.floor(roscoGameState.timer / 60)}:${
-                      roscoGameState.timer % 60 < 10
-                        ? "0" + (roscoGameState.timer % 60)
-                        : roscoGameState.timer % 60
-                    }`
-                  }
-                />
-              </ConfigProvider>
-            </Col>
-          </Grid>
+    <Box sx={roscoGameStyles().boxContainer}>
+      <Grid container sx={commonStyles().gridContainer}>
+        <Grid item xs={12} md={3} sx={roscoGameStyles().leftSide}>
+          <SelfProgress
+            size={window.innerWidth <= 576 ? "small" : 200}
+            style={{
+              ...commonStyles().progressStyle,
+              zIndex: `${window.innerWidth <= 576 ? 4 : 0}`,
+              right: `${window.innerWidth <= 576 ? "15px" : "0"}`,
+              bottom: `${window.innerWidth <= 576 ? "225px" : "0"}`,
+              position: `${window.innerWidth <= 576 ? "fixed" : "relative"}`,
+            }}
+            percent={100 - 100 * (roscoGameState.timer / 300)}
+            format={`${Math.floor(roscoGameState.timer / 60)}:${
+              roscoGameState.timer % 60 < 10
+                ? "0" + (roscoGameState.timer % 60)
+                : roscoGameState.timer % 60
+            }`}
+          />
           <Grid display={"flex"} gap={2}>
             <Avatar
               sx={{
@@ -93,7 +70,7 @@ const Rosco = () => {
               {roscoGameState.incorrectAnswers}
             </Avatar>
           </Grid>
-          <Grid sx={roscoGameStyles.helpButtons}>
+          <Grid sx={roscoGameStyles().helpButtons}>
             <HelpButtons
               timer={roscoGameState.timer}
               buttonText="Mostrar Sinónimos"
@@ -119,14 +96,14 @@ const Rosco = () => {
             />
           </Grid>
         </Grid>
-        <Grid item xs={12} md={9} sx={roscoGameStyles.rightSide}>
-          <Grid sx={roscoGameStyles.avatarLettersContainer}>
+        <Grid item xs={12} md={9} sx={roscoGameStyles().rightSide}>
+          <Grid sx={roscoGameStyles().avatarLettersContainer}>
             {alphabet.split("").map((letter, index) => {
               return (
                 <Avatar
                   key={index}
                   sx={{
-                    ...roscoGameStyles.avatarLetters,
+                    ...roscoGameStyles().avatarLetters,
                     bgcolor: `${roscoGameState.resultsArray[index]}`,
                     color: `${
                       index == roscoGameState.counter ? "black" : "white"
@@ -141,16 +118,14 @@ const Rosco = () => {
           {roscoGameState.activeTimer && (
             <Typography
               variant="h5"
-              style={{
-                color: `${mode == "light" ? "black" : "white"}`,
-              }}
+              style={roscoGameStyles(0, mode).definition}
             >
               {roscoGameState.definition}
             </Typography>
           )}
           {!roscoGameState.activeTimer ? (
             <Button
-              sx={roscoGameStyles.startGameButton}
+              sx={roscoGameStyles().startGameButton}
               variant="contained"
               color="success"
               fullWidth
@@ -171,9 +146,9 @@ const Rosco = () => {
               Comenzar Juego
             </Button>
           ) : (
-            <Grid sx={{ width: "100%", display: "flex" }} container>
+            <Grid sx={roscoGameStyles().formControlContainer} container>
               <Grid item xs={9}>
-                <FormControl fullWidth sx={roscoGameStyles.formControl}>
+                <FormControl fullWidth sx={roscoGameStyles().formControl}>
                   <TextField
                     fullWidth
                     placeholder="Ingresar respuesta"
@@ -189,11 +164,11 @@ const Rosco = () => {
                     }}
                     inputProps={{
                       style: {
-                        ...roscoGameStyles.textFieldInputProps,
+                        ...roscoGameStyles().textFieldInputProps,
                         textAlign: "center",
                       },
                     }}
-                    sx={roscoGameStyles.textField}
+                    sx={roscoGameStyles().textField}
                   ></TextField>
                 </FormControl>
               </Grid>
@@ -205,7 +180,7 @@ const Rosco = () => {
                   color="success"
                   onClick={() => handleEnterKey("Enter")}
                   sx={{
-                    ...roscoGameStyles.checkAnswerButton,
+                    ...roscoGameStyles().checkAnswerButton,
                     fontSize: `${window.innerWidth > 650 && "30px"}`,
                   }}
                 >
@@ -216,7 +191,7 @@ const Rosco = () => {
           )}
         </Grid>
         <Snackbar
-          sx={roscoGameStyles.snackBar}
+          sx={roscoGameStyles().snackBar}
           anchorOrigin={{ horizontal: "center", vertical: "top" }}
           open={openSnackbar}
           autoHideDuration={3000}
@@ -224,7 +199,7 @@ const Rosco = () => {
           message={`${roscoGameState.message}`}
           key={"center" + "center"}
         >
-          <Alert icon={false} sx={roscoGameStyles.snackbarAlert}>
+          <Alert icon={false} sx={roscoGameStyles().snackbarAlert}>
             {roscoGameState.message}
           </Alert>
         </Snackbar>

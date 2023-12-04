@@ -1,24 +1,18 @@
-import {
-  Box,
-  Button,
-  Divider,
-  FormControl,
-  Grid,
-  TextField,
-  Typography,
-} from "@mui/material";
-import { Col, ConfigProvider, Progress } from "antd";
+import { Box, FormControl, Grid, TextField } from "@mui/material";
 import { Loop } from "@mui/icons-material";
 import MathModal from "./components/MathModal";
 import useMathGame from "./hook/useMathGame";
 import { mathGameStyles } from "./styles/MathGame.styles";
+import { commonStyles } from "@styles/commonStyles";
+import SelfProgress from "@generalComponents/SelfProgress";
+import Score from "@generalComponents/Score";
+import ResetButton from "@generalComponents/ResetButton";
 
 const MathGame = () => {
   const {
     mathGameState,
     setMathGameState,
     isModalOpen,
-    mode,
     mathGameRecord,
     handleEnterKey,
     handleReset,
@@ -26,39 +20,30 @@ const MathGame = () => {
   } = useMathGame();
 
   return (
-    <Box sx={mathGameStyles.boxContainer}>
-      <Grid container sx={mathGameStyles.gridContainer}>
-        <Grid item xs={12} md={8} sx={mathGameStyles.leftSideContainer}>
-          <Grid
-            container
-            id="wordsContainer"
-            sx={{
-              width: "100%",
-            }}
-          >
+    <Box sx={commonStyles().boxContainer}>
+      <Grid container sx={commonStyles().gridContainer}>
+        <Grid item xs={12} md={8} sx={commonStyles().leftSideContainer}>
+          <Grid container id="wordsContainer" sx={commonStyles().width100}>
             <Grid
               item
               xs={12}
-              sx={{
-                ...mathGameStyles.ecuationContainer,
-                borderColor: `${mathGameState.backgroundColor}`,
-              }}
+              sx={
+                mathGameStyles(mathGameState.backgroundColor).ecuationContainer
+              }
             >
-              {mathGameState.runningGame? mathGameState.answerText : (
+              {mathGameState.runningGame ? (
+                mathGameState.answerText
+              ) : (
                 <Loop
                   fontSize="large"
-                  sx={{"&:hover": {cursor: "pointer"}}}
+                  sx={mathGameStyles().resetButtonInArrayText}
                   onClick={() => handleReset()}
-                />)}
+                />
+              )}
             </Grid>
           </Grid>
-          <Grid sx={mathGameStyles.inputContainer}>
-            <FormControl
-              fullWidth
-              sx={{
-                display: "flex",
-              }}
-            >
+          <Grid sx={mathGameStyles().inputContainer}>
+            <FormControl fullWidth sx={commonStyles().displayFlex}>
               <TextField
                 disabled={!mathGameState.runningGame}
                 fullWidth
@@ -81,70 +66,33 @@ const MathGame = () => {
                     textAlign: "center",
                   },
                 }}
-                sx={{ width: "100%", textAlign: "center" }}
+                sx={mathGameStyles().input}
               ></TextField>
             </FormControl>
-
-            <Button
-              variant="contained"
-              color="info"
-              sx={{ borderRadius: "5px", width: "15%" }}
-              onClick={handleReset}
-            >
-              <Loop fontSize="large" />
-            </Button>
+            <ResetButton
+              resetStyles={commonStyles().resetButtonSmall}
+              handleReset={handleReset}
+            />
           </Grid>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={4}
-          sx={mathGameStyles.rightSideContainer}
-        >
-          <Grid>
-            <Col>
-              <ConfigProvider
-                theme={{
-                  components: {
-                    Progress: {
-                      circleTextColor: `${mode == "light" ? "black" : "white"}`,
-                    },
-                  },
-                }}
-              >
-                <Progress
-                  size={150}
-                  success={{ percent: 0, strokeColor: "#fff" }}
-                  type="circle"
-                  className=""
-                  strokeColor={"#2979ff"}
-                  trailColor={"lightGrey"}
-                  style={mathGameStyles.progressStyle}
-                  percent={100 - 100 * (mathGameState.timer / 60)}
-                  format={() =>
-                    `${Math.floor(mathGameState.timer / 60)}:${
-                      mathGameState.timer % 60 < 10
-                        ? "0" + (mathGameState.timer % 60)
-                        : mathGameState.timer % 60
-                    }`
-                  }
-                />
-              </ConfigProvider>
-            </Col>
-          </Grid>
-          <Grid sx={{ width: "75%", mb: 3 }}>
-            <Grid display={"flex"} sx={{ justifyContent: "space-between" }}>
-              <Typography variant="h6">Record: </Typography>
-              <Typography variant="h6">{mathGameRecord}</Typography>
-            </Grid>
-            <Divider />
-            <Grid display={"flex"} sx={{ justifyContent: "space-between" }}>
-              <Typography variant="h6">Puntuación Actual: </Typography>
-              <Typography variant="h6">
-                {mathGameState.correctAnswers - mathGameState.incorrectAnswers}
-              </Typography>
-            </Grid>
-          </Grid>
+        <Grid item xs={12} md={4} sx={commonStyles().rightSideContainer}>
+          <SelfProgress
+            size={150}
+            format={`${Math.floor(mathGameState.timer / 60)}:${
+              mathGameState.timer % 60 < 10
+                ? "0" + (mathGameState.timer % 60)
+                : mathGameState.timer % 60
+            }`}
+            percent={100 - 100 * (mathGameState.timer / 60)}
+            style={commonStyles().progressStyle}
+          />
+          <Score
+            gridStyles={{ width: "75%", mb: 3 }}
+            record={mathGameRecord}
+            actualScore={
+              mathGameState.correctAnswers - mathGameState.incorrectAnswers
+            }
+          />
         </Grid>
       </Grid>
       <MathModal

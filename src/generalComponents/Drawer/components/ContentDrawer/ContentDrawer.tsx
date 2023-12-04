@@ -13,15 +13,10 @@ import SmartToyIcon from "@mui/icons-material/SmartToy";
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   ...theme.mixins.toolbar,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-end",
-  backgroundColor: "white",
-  height: 65,
-  boxShadow: "inset -2px 0px 0px 0px rgba(0,0,0,0.2)",
-  borderRadius: "0px",
+  ...ResponsiveDrawerStyles().responsiveDrawerHeaderStyled,
 }));
-import "../../styles/responsiveDrawer.css"
+import "../../styles/responsiveDrawer.css";
+import { ResponsiveDrawerStyles } from "../../styles/ResponsiveDrawer.styles";
 
 interface ContentDrawerProps {
   useGetCurrentBreakpoint: (arg0: number) => string;
@@ -35,39 +30,15 @@ const ContentDrawer = ({
   open,
 }: ContentDrawerProps) => {
   const currentBreakpoint = useGetCurrentBreakpoint(windowWidth);
-  const theme = useTheme()
+  const theme = useTheme();
   return (
     <>
       <DrawerHeader sx={{ marginBottom: "10px" }}>
         <Grid
           gap={1}
-          display="flex"
-          alignItems={"center"}
-          justifyContent={"start"}
-          sx={{
-            ...(open
-              ? {}
-              : {
-                  height: "65px",
-                }),
-            backgroundColor: "white",
-            width: "100%",
-            height: "100%",
-            transition: "0.3s",
-            boxShadow: "inset -2px 0px 0px 0px rgba(0,0,0,0.2)",
-            borderRadius: "0px",
-          }}
+          sx={ResponsiveDrawerStyles("", open).responsiveDrawerHeader}
         >
-          <Card
-            sx={{
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: "0px",
-            }}
-          >
+          <Card sx={ResponsiveDrawerStyles().responsiveDrawerHeaderCard}>
             <SmartToyIcon fontSize="large" />
             {open ? (
               <Typography sx={{ ml: 1 }}>Multigame App</Typography>
@@ -84,45 +55,26 @@ const ContentDrawer = ({
         >
           <ListItem
             key={subIndex}
-            sx={{
-              pt: 1,
-              pb: 0,
-              ...(currentBreakpoint !== "xs" &&
-              currentBreakpoint !== "sm" &&
-              currentBreakpoint !== "md" &&
-              !open
-                ? {
-                    paddingY: "5px !important",
-                    justifyContent: "center",
-                  }
-                : ""),
-            }}
+            sx={
+              ResponsiveDrawerStyles(currentBreakpoint, open)
+                .responsiveDrawerListItem
+            }
           >
             <NavLink
               to={`${item.route}`}
               end
               className="navLink"
-              style={{
-                alignItems: "stretch",
-                display: "flex",
-                padding: "5px",
-                borderRadius: "10px",
-                transition: "0.2s ease-in",
-                textDecoration: "none",
-                color: `${theme.palette.mode == "dark" ? "#FFF": "#000"}`
-              }}
+              style={
+                ResponsiveDrawerStyles("", false, theme.palette.mode)
+                  .responsiveDrawerStylesNavLink
+              }
             >
               {item.icon}
               <Typography
-                sx={{
-                  ...(currentBreakpoint !== "xs" &&
-                  currentBreakpoint !== "sm" &&
-                  currentBreakpoint !== "md" &&
-                  !open
-                    ? { display: "none" }
-                    : ""),
-                  color: "inherit"
-                }}
+                sx={
+                  ResponsiveDrawerStyles(currentBreakpoint, open)
+                    .responsiveDrawerStylesText
+                }
               >
                 {item.label}
               </Typography>

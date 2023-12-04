@@ -19,7 +19,6 @@ const MathModal = ({
   mathGameRecord,
 }: MathModalProps) => {
   useEffect(() => {
-    console.log(previousRecord);
   }, [previousRecord]);
   return (
     <Modal

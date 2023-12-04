@@ -6,9 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   setMechanographyScore,
   setMechanographyStats,
-} from "../../../redux/states/mechanographyState";
-import { AppStore } from "../../../redux/store";
-import { handleLocalStorage } from "../../../utils/handleLocalStorage";
+} from "@redux/states/mechanographyState";
+import { AppStore } from "@redux/store";
+import { handleLocalStorage } from "@utils/handleLocalStorage";
 
 export interface mechanographyGame {
   activeTimer: boolean;
@@ -169,7 +169,6 @@ const useMechanography = () => {
       const parsedRecord = localStorageRecord
         ? JSON.parse(localStorageRecord)
         : {};
-      console.log(parsedRecord?.max);
 
       setMechanographyGameState((prevState) => ({
         ...prevState,
