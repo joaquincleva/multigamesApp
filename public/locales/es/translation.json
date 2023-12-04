@@ -1,0 +1,60 @@
+{
+  "topBar": {
+    "lightMode": "Modo claro",
+    "darkMode": "Modo oscuro",
+    "changeLenguage": "Cambiar Idioma"
+  },
+  "dashboard": {
+    "score": "Tus puntuaciones",
+    "timeSelect": {
+      "timeRange": "Rango",
+      "days": "Días",
+      "weeks": "Semanas",
+      "months": "Meses"
+    },
+    "statisticsCards": {
+      "gamesQty": "Partidas",
+      "noGames": "Aun no tienes partidas en el juego",
+      "playButton": "Jugar"
+    }
+  },
+  "rosco": {
+    "showlettersQty": "Cantidad de letras",
+    "showAntonyms": "Mostrar Antónimos",
+    "showSynonyms": "Mostrar Sinónimos",
+    "lettersQty": "Cnatidad de letras",
+    "antonyms": "Antónimos",
+    "synonyms": "Sinónimos",
+    "startGame": "Comenzar Juego",
+    "inputAnswer": "Ingresar Respuesta",
+    "usedHelp": "Ya has usado este recurso",
+    "lessThan5Seconds": "Tienes menos de 5 segundos",
+    "inputButton": "Ingresar",
+    "modal": {
+      "finishedTime": "El tiempo ha terminado",
+      "finishedRosco": "Felicitaciones! Has completado el rosco",
+      "newRecord": "¡Nuevo Record!",
+      "score": "Puntuación",
+      "correctAnswers": "Respuestas Correctas",
+      "incorrectAnswers": "Respuestas Incorrectas",
+      "completedRosco": "Rosco completado",
+      "helps": "Ayudas"
+    }
+  },
+  "mechanography": {
+    "write": "Escribir"
+  },
+  "mathGame": {
+    "calculate": "Calcular"
+  },
+  "scoreComponent": {
+    "actualScore": "Puntuación actual"
+  },
+  "modal": {
+    "finishedTime": "El tiempo ha terminado",
+    "newRecord": "¡Nuevo Record!",
+    "score": "Puntuación",
+    "correctAnswers": "Respuestas Correctas",
+    "incorrectAnswers": "Respuestas Incorrectas"
+  }
+}

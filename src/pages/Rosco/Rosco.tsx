@@ -29,6 +29,7 @@ const Rosco = () => {
     handleSnackbar,
     handleEnterKey,
     roscoRecord,
+    t
   } = useRosco();
 
   return (
@@ -73,7 +74,7 @@ const Rosco = () => {
           <Grid sx={roscoGameStyles().helpButtons}>
             <HelpButtons
               timer={roscoGameState.timer}
-              buttonText="Mostrar Sinónimos"
+              buttonText={t("rosco.showSynonyms")}
               disabled={roscoGameState.disableSynonyms}
               handleSnackbar={handleSnackbar}
               handleSnackbarText="synonyms"
@@ -81,7 +82,7 @@ const Rosco = () => {
 
             <HelpButtons
               timer={roscoGameState.timer}
-              buttonText="Mostrar Antónimos"
+              buttonText={t("rosco.showAntonyms")}
               disabled={roscoGameState.disableAntonyms}
               handleSnackbar={handleSnackbar}
               handleSnackbarText="antonyms"
@@ -89,7 +90,7 @@ const Rosco = () => {
 
             <HelpButtons
               timer={roscoGameState.timer}
-              buttonText="Cantidad de Letras"
+              buttonText={t("rosco.showlettersQty")}
               disabled={roscoGameState.disableLettersQty}
               handleSnackbar={handleSnackbar}
               handleSnackbarText="letterQty"
@@ -143,7 +144,7 @@ const Rosco = () => {
                 }));
               }}
             >
-              Comenzar Juego
+              {t("rosco.startGame")}
             </Button>
           ) : (
             <Grid sx={roscoGameStyles().formControlContainer} container>
@@ -151,7 +152,7 @@ const Rosco = () => {
                 <FormControl fullWidth sx={roscoGameStyles().formControl}>
                   <TextField
                     fullWidth
-                    placeholder="Ingresar respuesta"
+                    placeholder={t("rosco.inputAnswer")}
                     value={roscoGameState.responseText}
                     onChange={(e) => {
                       setRoscoGameState((prevState) => ({
@@ -184,7 +185,7 @@ const Rosco = () => {
                     fontSize: `${window.innerWidth > 650 && "30px"}`,
                   }}
                 >
-                  Ingresar
+                  {t("rosco.inputButton")}
                 </Button>
               </Grid>
             </Grid>

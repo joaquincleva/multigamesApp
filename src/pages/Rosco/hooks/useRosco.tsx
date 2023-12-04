@@ -36,6 +36,7 @@ const useRosco = () => {
   );
   const roscoRecord = roscoReduxStats.max;
   const dispatch = useDispatch();
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (roscoReduxStats.results.length != 0) {
@@ -104,7 +105,7 @@ const useRosco = () => {
           roscoGameState.antonyms[1].slice(1);
         setRoscoGameState((prevState) => ({
           ...prevState,
-          message: "Antonimos: " + str1 + ", " + str2,
+          message: t("rosco.antonyms") +": " + str1 + ", " + str2,
           disableAntonyms: true,
         }));
       }
@@ -117,14 +118,14 @@ const useRosco = () => {
           roscoGameState.synonyms[1].slice(1);
         setRoscoGameState((prevState) => ({
           ...prevState,
-          message: "Sinonimos: " + str1 + ", " + str2,
+          message: t("rosco.synonyms") +": " + str1 + ", " + str2,
           disableSynonyms: true,
         }));
       }
       if (mensaje == "letterQty") {
         setRoscoGameState((prevState) => ({
           ...prevState,
-          message: "Cantidad de letras: " + roscoGameState.answerText.length,
+          message: t("rosco.lettersQty") + ": " + roscoGameState.answerText.length,
           disableLettersQty: true,
         }));
       }
@@ -254,7 +255,7 @@ const useRosco = () => {
       let data = [];
       const random = Math.floor(Math.random() * 4);
       data =
-        i18n.language === "fr"
+        i18n.language === "es"
           ? roscoGameData.spanishData
           : roscoGameData.englishData;
       const letter = data[roscoGameState.counter];
@@ -293,6 +294,7 @@ const useRosco = () => {
     handleEnterKey,
     roscoRecord,
     handleCloseSnackbar,
+    t
   };
 };
 

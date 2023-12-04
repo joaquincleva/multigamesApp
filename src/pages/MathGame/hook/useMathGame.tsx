@@ -6,6 +6,7 @@ import {
   setMathGameStats,
 } from "@redux/states/mathGameState";
 import { handleLocalStorage } from "@utils/handleLocalStorage";
+import { useTranslation } from "react-i18next";
 
 const useMathGame = () => {
   const [mathGameState, setMathGameState] = useState({
@@ -25,8 +26,8 @@ const useMathGame = () => {
   });
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const dispatch = useDispatch();
+  const { t } = useTranslation()
 
   const mathGameStats = useSelector((state: AppStore) => state.mathGame);
   const mathGameRecord = mathGameStats.max;
@@ -176,6 +177,7 @@ const useMathGame = () => {
     handleEnterKey,
     handleReset,
     closeModal,
+    t
   };
 };
 

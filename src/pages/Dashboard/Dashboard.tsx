@@ -20,10 +20,10 @@ import EmptyStatsCard from "./components/emptyStatsCard";
 import { commonStyles } from "../../styles/commonStyles";
 
 export default function Dashboard() {
-  const { reduxData, dashboardState, setDashboardState, mode } = useDashboard();
+  const { reduxData, dashboardState, setDashboardState, mode, t } =
+    useDashboard();
 
-  console.log("dashboardState.recordsScore.rosco",dashboardState.roscoData);
-  
+  console.log("dashboardState.recordsScore.rosco", dashboardState.roscoData);
 
   const statsArray = [
     [
@@ -65,13 +65,15 @@ export default function Dashboard() {
       <Grid container sx={dashboardStyles().gridContainer} gap={1}>
         <Grid xs={12} sx={dashboardStyles().titleContainer}>
           <Typography sx={dashboardStyles().title} variant="h4">
-            Tus puntuaciones
+            {t("dashboard.score")}
           </Typography>
           <FormControl sx={{ m: 1, minWidth: 120 }}>
-            <InputLabel id="demo-simple-select-helper-label">Range</InputLabel>
+            <InputLabel id="demo-simple-select-helper-label">
+              {t("dashboard.timeSelect.timeRange")}
+            </InputLabel>
             <Select
               value={dashboardState.dateFrame}
-              label="Rango"
+              label={t("dashboard.timeSelect.timeRange")}
               onChange={(e) => {
                 setDashboardState((prevState) => ({
                   ...prevState,
@@ -79,9 +81,15 @@ export default function Dashboard() {
                 }));
               }}
             >
-              <MenuItem value={"days"}>Days</MenuItem>
-              <MenuItem value={"weeks"}>Weeks</MenuItem>
-              <MenuItem value={"months"}>Months</MenuItem>
+              <MenuItem value={"days"}>
+                {t("dashboard.timeSelect.days")}
+              </MenuItem>
+              <MenuItem value={"weeks"}>
+                {t("dashboard.timeSelect.weeks")}
+              </MenuItem>
+              <MenuItem value={"months"}>
+                {t("dashboard.timeSelect.months")}
+              </MenuItem>
             </Select>
           </FormControl>
         </Grid>

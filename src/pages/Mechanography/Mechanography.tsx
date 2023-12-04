@@ -17,6 +17,7 @@ const Mechanography = () => {
     mode,
     closeModal,
     mechanographyRecord,
+    t
   } = useMechanography();
 
   return (
@@ -62,7 +63,7 @@ const Mechanography = () => {
                 disabled={!mechanographyGameState.runningGame}
                 fullWidth
                 placeholder={`${
-                  mechanographyGameState.current == 0 ? "Escribir" : ""
+                  mechanographyGameState.current == 0 ? t("mechanography.write") : ""
                 }`}
                 value={mechanographyGameState.responseText.trim()}
                 onChange={(e) => {

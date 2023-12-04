@@ -4,6 +4,7 @@ import React from "react";
 import Chart from "react-google-charts";
 import { minMax } from "../hook/useDashboard";
 import { commonStyles } from "../../../styles/commonStyles";
+import { useTranslation } from "react-i18next";
 
 interface StatsCardProps {
   index: number;
@@ -24,6 +25,9 @@ const StatsCard = ({
   minMax,
   resultsData,
 }: StatsCardProps) => {
+
+  const { t } = useTranslation()
+
   return (
     <Grid
       key={index}
@@ -40,7 +44,7 @@ const StatsCard = ({
         </Grid>
 
         <Grid sx={dashboardStyles().statsCardGameCount}>
-          <Typography>Partidas: {gamesQty}</Typography>
+          <Typography>{t("dashboard.statisticsCards.gamesQty")}: {gamesQty}</Typography>
         </Grid>
         <Grid sx={commonStyles().displayFlex} gap={2}>
           <Typography variant="subtitle1">

@@ -1,6 +1,6 @@
 import { Box, Divider, Grid, Modal, Typography } from "@mui/material";
 import { RoscoGame } from "../hooks/useRosco";
-import { commonStyles } from "@styles/commonStyles";
+import { useTranslation } from "react-i18next";
 
 interface RoscoModalProps {
   isModalOpen: boolean;
@@ -15,6 +15,8 @@ const RoscoModal = ({
   roscoGameState,
   roscoRecord,
 }: RoscoModalProps) => {
+  const { t } = useTranslation();
+
   return (
     <Modal
       open={isModalOpen}
@@ -22,11 +24,22 @@ const RoscoModal = ({
       aria-labelledby="modal-title"
       aria-describedby="modal-description"
     >
-      <Box sx={commonStyles().displayFlex}>
+      <Box
+        sx={{
+          position: "absolute",
+          bgcolor: "background.paper",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "40%",
+          p: 2,
+          borderRadius: "5px",
+        }}
+      >
         <Typography variant="h5" textAlign={"center"}>
           {roscoGameState.correctAnswers == 26
-            ? "Felicitaciones! Has completado el rosco"
-            : "EL juego ha terminado"}
+            ? t("rosco.modal.finishedRosco")
+            : t("rosco.modal.finishedTime")}
         </Typography>
 
         {(roscoGameState.correctAnswers == 26 ? 30 : 0) +
@@ -37,33 +50,33 @@ const RoscoModal = ({
           roscoGameState.incorrectAnswers >
           roscoGameState.previousRecord && (
           <Typography variant="body2" textAlign={"center"} color={"#4caf50"}>
-            ¡Nuevo record!
+            {t("rosco.modal.newRecord")}
           </Typography>
         )}
         <Grid sx={{ display: "flex", flexDirection: "column" }}>
           <Typography sx={{ mt: 2 }} variant="h6" textAlign={"center"}>
-            Puntuación
+            {t("rosco.modal.score")}
           </Typography>
           <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography>Rosco completado</Typography>
+            <Typography>{t("rosco.modal.completedRosco")}</Typography>
             <Typography color={"#4caf50"}>
               {roscoGameState.correctAnswers == 26 ? "30" : "0"}
             </Typography>
           </Grid>
           <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography>Respuestas Correctas</Typography>
+            <Typography>{t("rosco.modal.correctAnswers")}</Typography>
             <Typography color={"#4caf50"}>
               {roscoGameState.correctAnswers}
             </Typography>
           </Grid>
           <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography>Respuestas Inorrectas</Typography>
+            <Typography>{t("rosco.modal.incorrectAnswers")}</Typography>
             <Typography color={"error"}>
               -{roscoGameState.incorrectAnswers}
             </Typography>
           </Grid>
           <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography>Ayudas</Typography>
+            <Typography>{t("rosco.modal.helps")}</Typography>
             <Typography color={"error"}>
               {Number(roscoGameState.disableAntonyms) +
                 Number(roscoGameState.disableSynonyms) +

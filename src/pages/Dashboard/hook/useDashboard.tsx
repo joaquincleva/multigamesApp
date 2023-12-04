@@ -14,6 +14,7 @@ import {
   getLastWeeksData,
   monthNames,
 } from "../utils/datesFunctions";
+import { useTranslation } from "react-i18next";
 
 export interface minMax {
   max: number;
@@ -42,6 +43,7 @@ const useDashboard = () => {
   const reduxData = useSelector((state: AppStore) => state);
   const dispatch = useDispatch();
   const { mode } = useTheme().palette;
+  const { t } = useTranslation()
 
   //States
 
@@ -197,6 +199,7 @@ const useDashboard = () => {
     dashboardState,
     setDashboardState,
     mode,
+    t
   };
 };
 

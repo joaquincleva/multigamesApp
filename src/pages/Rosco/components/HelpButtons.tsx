@@ -1,5 +1,6 @@
 import { Button, Tooltip } from "@mui/material";
 import { commonStyles } from "@styles/commonStyles";
+import { useTranslation } from "react-i18next";
 
 interface HelpButtonsProps {
   disabled: boolean;
@@ -16,13 +17,14 @@ const HelpButtons = ({
   handleSnackbarText,
   buttonText,
 }: HelpButtonsProps) => {
+  const { t } = useTranslation()
   return (
     <Tooltip
       title={`${
         disabled
-          ? "Ya has usado este recurso"
+          ? t("rosco.usedHelp")
           : timer <= 5
-          ? "Tienes menos de 5 segundos"
+          ? t("rosco.lessThan5Seconds")
           : ""
       }`}
     >

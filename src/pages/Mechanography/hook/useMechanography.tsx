@@ -32,6 +32,7 @@ const useMechanography = () => {
     (state: AppStore) => state.mechanography
   );
   const mechanographyRecord = mechanographyStats.max;
+  const { t } = useTranslation()
 
   //States
 
@@ -200,7 +201,7 @@ const useMechanography = () => {
 
   useEffect(() => {
     const data =
-      i18n.language === "fr" ? gameData.spanishWords : gameData.englishWords;
+      i18n.language === "es" ? gameData.spanishWords : gameData.englishWords;
     const array: string[] = [];
     for (let i = 0; i < 1000; i++) {
       array.push(data[Math.floor(Math.random() * data.length)]);
@@ -228,6 +229,7 @@ const useMechanography = () => {
     handleEnterKey,
     handleReset,
     mechanographyRecord,
+    t
   };
 };
 

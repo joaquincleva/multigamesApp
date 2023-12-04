@@ -17,6 +17,7 @@ const MathGame = () => {
     handleEnterKey,
     handleReset,
     closeModal,
+    t
   } = useMathGame();
 
   return (
@@ -47,7 +48,7 @@ const MathGame = () => {
               <TextField
                 disabled={!mathGameState.runningGame}
                 fullWidth
-                placeholder={`${mathGameState.current == 0 ? "Calcular" : ""}`}
+                placeholder={`${mathGameState.current == 0 ? t("mathGame.calculate") : ""}`}
                 value={mathGameState.responseText.trim()}
                 onChange={(e) => {
                   setMathGameState((prevState) => ({

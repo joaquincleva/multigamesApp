@@ -181,7 +181,7 @@ const useFourChoicesGame = () => {
 
   useEffect(() => {
     const data: WordData[] =
-      i18n.language === "fr" ? gameData.spanishWords : gameData.englishWords;
+      i18n.language === "es" ? gameData.spanishWords : gameData.englishWords;
     let boolean = true;
 
     while (boolean) {

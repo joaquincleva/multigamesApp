@@ -30,13 +30,13 @@ const Language = () => {
               />
             </ListItemIcon>
             <ListItemText>
-              {t("settings.drawer.language.options.en")}
+              English
             </ListItemText>
             {i18n.language === "en" ? <Check /> : null}
           </MenuItem>
           <MenuItem
             onClick={() => {
-              i18n.changeLanguage("fr");
+              i18n.changeLanguage("es");
             }}
           >
             <ListItemIcon>
@@ -46,9 +46,9 @@ const Language = () => {
               />
             </ListItemIcon>
             <ListItemText>
-              {t("settings.drawer.language.options.fr")}
+              Español
             </ListItemText>
-            {i18n.language === "fr" ? <Check /> : null}
+            {i18n.language === "es" ? <Check /> : null}
           </MenuItem>
         </MenuList>
       </Paper>

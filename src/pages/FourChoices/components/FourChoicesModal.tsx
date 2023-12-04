@@ -1,5 +1,5 @@
 import { Box, Divider, Grid, Modal, Typography } from "@mui/material";
-import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 interface FourChoicesModalProps {
   isModalOpen: boolean;
@@ -18,8 +18,7 @@ const FourChoicesModal = ({
   incorrectAnswers,
   fourChoicesRecord,
 }: FourChoicesModalProps) => {
-  useEffect(() => {
-  }, [previousRecord]);
+  const { t } = useTranslation()
   return (
     <Modal
       open={isModalOpen}
@@ -40,23 +39,23 @@ const FourChoicesModal = ({
         }}
       >
         <Typography variant="h5" textAlign={"center"}>
-          El tiempo ha terminado
+          {t("modal.finishedTime")}
         </Typography>
         {fourChoicesRecord > previousRecord && (
           <Typography variant="body2" textAlign={"center"} color={"#4caf50"}>
-            ¡Nuevo record!
+            {t("modal.newRecord")}
           </Typography>
         )}
         <Grid sx={{ display: "flex", flexDirection: "column" }}>
           <Typography sx={{ my: 3 }} variant="h6" textAlign={"center"}>
-            Puntuación
+          {t("modal.score")}
           </Typography>
           <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography>Respuestas Correctas</Typography>
+            <Typography>{t("modal.correctAnswers")}</Typography>
             <Typography color={"#4caf50"}>{correctAnswers}</Typography>
           </Grid>
           <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Typography>Respuestas Inorrectas</Typography>
+            <Typography>{t("modal.incorrectAnswers")}</Typography>
             <Typography color={"error"}>{incorrectAnswers}</Typography>
           </Grid>
 
