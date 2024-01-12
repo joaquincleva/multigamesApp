@@ -100,7 +100,11 @@ const ResponsiveDrawer = ({ children }: ResponsiveDrawerProps) => {
           <ContentDrawer {... {useGetCurrentBreakpoint, windowWidth, open}}/>
         </Drawer>
       </Box>
-      <Box component="main" flexGrow={1} p={0} sx={{width: "100vw !important", height: "85vh !important"}}>
+      <Box component="main" flexGrow={1} p={0} sx={{width: "100vw !important", height: "85vh !important", marginTop: ["xs", "sm"].includes(
+                  useGetCurrentBreakpoint(windowWidth)
+                )
+                  ? "40px"
+                  : "0",}}>
         <Toolbar/>
         {children}
       </Box>

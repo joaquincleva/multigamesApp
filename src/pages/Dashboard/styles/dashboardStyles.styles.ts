@@ -24,6 +24,7 @@ export const dashboardStyles = (mode: string = "") => {
       "& text": {
         fill: `${mode === "dark" ? "#fff !important" : "#212121 !important"}`,
       },
+      height: "180px"
     },
     statsCardHeader: {
       display: "flex",
@@ -38,7 +39,7 @@ export const dashboardStyles = (mode: string = "") => {
       borderRadius: "5px",
       border: "2px solid grey",
       padding: "15px",
-      height: "34vh",
+      height: "180px",
       display: "flex",
       flexDirection: "column",
       justifyContent: "space-between",

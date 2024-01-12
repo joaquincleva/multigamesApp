@@ -26,33 +26,42 @@ export function getLastWeeksData(
   }).reverse();
 }
 
-export function getLastMonthsData(
-  data: any,
-  currentDate: Date,
-  monthNames: string[],
-  count: number
-) {
-  return Array.from({ length: count }, (_, index) => {
-    const startDate = new Date(currentDate);
-    startDate.setMonth(startDate.getMonth() - index);
-    const endDate = new Date(currentDate);
-    endDate.setMonth(endDate.getMonth() - (index - 1));
+export function getLastMonthsData(data:any, months:any) {
+  // Inicializar un objeto para almacenar el máximo de cada mes
+  const maxScoresByMonth:any = {};
 
-    const monthData = data.filter((item: any) => {
-      const itemDate = new Date(item.date);
-      return itemDate >= startDate && itemDate < endDate;
-    });
+  const currentDate = new Date();
 
-    const monthLabel = monthNames[currentDate.getMonth() - index];
+  // Iterar sobre los datos y actualizar el máximo de cada mes
+  data.forEach((entry:any) => {
+    const entryDate = new Date(entry.date);
+    const monthKey = months[entryDate.getMonth()];
 
-    if (monthData.length > 0) {
-      const maxScore = Math.max(...monthData.map((item: any) => item.score));
-      return [monthLabel, maxScore];
-    } else {
-      return [monthLabel, null];
+    if (!maxScoresByMonth[monthKey] || entry.score > maxScoresByMonth[monthKey]) {
+      maxScoresByMonth[monthKey] = entry.score;
     }
-  }).reverse();
+  });
+
+  // Obtener los últimos 5 meses (hacia atrás desde la fecha actual)
+  const lastFiveMonths = [];
+  let monthsCounter = 0;
+  let currentMonthIndex = currentDate.getMonth();
+
+  while (monthsCounter < 5) {
+    const currentMonthKey = months[currentMonthIndex];
+    const maxScore = maxScoresByMonth[currentMonthKey] || null;
+
+    lastFiveMonths.unshift([currentMonthKey, maxScore]);
+
+    currentMonthIndex = (currentMonthIndex - 1 + 12) % 12; // Manejar el cambio de año
+    monthsCounter++;
+  }
+
+  return lastFiveMonths;
 }
+
+
+
 
 export function getLastDaysData(
   data: any,
@@ -78,8 +87,8 @@ export function getLastDaysData(
   }).reverse();
 }
 
-export const dayNames = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
-export const monthNames = [
+export const dayNamesSp = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+export const monthNamesSp = [
   "Enero",
   "Febrero",
   "Marzo",
@@ -92,4 +101,19 @@ export const monthNames = [
   "Octubre",
   "Noviembre",
   "Diciembre",
+];
+export const dayNamesEn = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+export const monthNamesEn = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];

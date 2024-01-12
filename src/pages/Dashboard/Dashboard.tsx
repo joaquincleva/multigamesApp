@@ -23,7 +23,7 @@ export default function Dashboard() {
   const { reduxData, dashboardState, setDashboardState, mode, t } =
     useDashboard();
 
-  console.log("dashboardState.recordsScore.rosco", dashboardState.roscoData);
+  console.log("dashboardState", dashboardState.recordsScore);
 
   const statsArray = [
     [
@@ -72,6 +72,7 @@ export default function Dashboard() {
               {t("dashboard.timeSelect.timeRange")}
             </InputLabel>
             <Select
+            size="small"
               value={dashboardState.dateFrame}
               label={t("dashboard.timeSelect.timeRange")}
               onChange={(e) => {

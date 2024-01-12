@@ -52,7 +52,7 @@ const Rosco = () => {
                 : roscoGameState.timer % 60
             }`}
           />
-          <Grid display={"flex"} gap={2}>
+          <Grid display={"flex"} gap={2} sx={{marginY: `${window.innerWidth <= 900 ? "15px" : "0"}`}}>
             <Avatar
               sx={{
                 ...roscoGameStyles,

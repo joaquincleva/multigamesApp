@@ -3,6 +3,8 @@ export const ResponsiveDrawerStyles = (
   open: boolean = false,
   mode: string = ""
 ) => {
+  console.log(currentBreakpoint);
+  
   return {
     drawerContainer: {
       display: "flex",
@@ -13,7 +15,9 @@ export const ResponsiveDrawerStyles = (
       position: "fixed",
       display: "flex",
       boxShadow: "none",
+      paddingBottom: "2px",
       borderBottom: 2,
+      borderColor: "rgba(0,0,0,0.35)"
     },
     appbarTitleContainer: {
       width: "100%",
@@ -21,8 +25,7 @@ export const ResponsiveDrawerStyles = (
       display: "flex",
       ml: 3,
     },
-    appbarTitle:
-      currentBreakpoint == "xs" || currentBreakpoint == "sm" ? 25 : 42,
+    appbarTitle: "2em",
     appBarTitleFont: { fontFamily: "'Montserrat Subrayada', sans-serif" },
     themeContainer: {
       display: "flex",

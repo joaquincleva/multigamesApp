@@ -8,11 +8,13 @@ import { setFourChoicesStats } from "../../../redux/states/fourChoicesState";
 import { setRoscoStats } from "../../../redux/states/roscoReduxState";
 import { setMechanographyStats } from "../../../redux/states/mechanographyState";
 import {
-  dayNames,
+  dayNamesSp,
+  dayNamesEn,
   getLastDaysData,
   getLastMonthsData,
   getLastWeeksData,
-  monthNames,
+  monthNamesEn,
+  monthNamesSp,
 } from "../utils/datesFunctions";
 import { useTranslation } from "react-i18next";
 
@@ -43,7 +45,7 @@ const useDashboard = () => {
   const reduxData = useSelector((state: AppStore) => state);
   const dispatch = useDispatch();
   const { mode } = useTheme().palette;
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation();
 
   //States
 
@@ -72,6 +74,9 @@ const useDashboard = () => {
 
     let result: any[];
 
+    const dayNames = i18n.language === "en" ? dayNamesEn : dayNamesSp;
+    const monthNames = i18n.language === "en" ? monthNamesEn : monthNamesSp;
+
     switch (dashboardState.dateFrame) {
       case "days":
         result = getLastDaysData(transformedData, currentDate, dayNames, 8);
@@ -80,11 +85,13 @@ const useDashboard = () => {
         result = getLastWeeksData(transformedData, currentDate, dayNames, 4);
         break;
       case "months":
-        result = getLastMonthsData(transformedData, currentDate, monthNames, 5);
+        result = getLastMonthsData(transformedData, monthNames);
         break;
       default:
         result = [];
     }
+    console.log(result);
+    
     return [["", ""], ...result];
   }
 
@@ -99,7 +106,7 @@ const useDashboard = () => {
         ...prevState,
         roscoData: filterData(parsedData.results),
         recordsScore: {
-          ...dashboardState.recordsScore,
+          ...prevState.recordsScore,
           rosco: {
             max: parsedData.max,
             min: parsedData.min,
@@ -107,6 +114,10 @@ const useDashboard = () => {
         },
       }));
     }
+    //eslint-disable-next-line
+  }, []);
+
+  useEffect(() => {
     const localStorageMechanographyRecord = handleLocalStorage(
       "get",
       "mechanography"
@@ -118,7 +129,7 @@ const useDashboard = () => {
         ...prevState,
         mechanographyData: filterData(parsedData.results),
         recordsScore: {
-          ...dashboardState.recordsScore,
+          ...prevState.recordsScore,
           mechanography: {
             max: parsedData.max,
             min: parsedData.min,
@@ -126,19 +137,24 @@ const useDashboard = () => {
         },
       }));
     }
+    //eslint-disable-next-line
+  }, []);
 
+  useEffect(() => {
     const localStorageFourChoicesRecord = handleLocalStorage(
       "get",
       "fourChoices"
     );
     if (localStorageFourChoicesRecord) {
       const parsedData = JSON.parse(localStorageFourChoicesRecord);
+      console.log(parsedData);
+      
       dispatch(setFourChoicesStats(parsedData));
       setDashboardState((prevState) => ({
         ...prevState,
         fourChoicesData: filterData(parsedData.results),
         recordsScore: {
-          ...dashboardState.recordsScore,
+          ...prevState.recordsScore,
           fourChoices: {
             max: parsedData.max,
             min: parsedData.min,
@@ -146,7 +162,10 @@ const useDashboard = () => {
         },
       }));
     }
+    //eslint-disable-next-line
+  }, []);
 
+  useEffect(() => {
     const localStorageMathGameRecord = handleLocalStorage("get", "mathGame");
     if (localStorageMathGameRecord) {
       const parsedData = JSON.parse(localStorageMathGameRecord);
@@ -155,7 +174,7 @@ const useDashboard = () => {
         ...prevState,
         mathGameData: filterData(parsedData.results),
         recordsScore: {
-          ...dashboardState.recordsScore,
+          ...prevState.recordsScore,
           mathGame: {
             max: parsedData.max,
             min: parsedData.min,
@@ -176,19 +195,19 @@ const useDashboard = () => {
     if (dashboardState.fourChoicesData) {
       setDashboardState((prevState) => ({
         ...prevState,
-        fourChoicesData: filterData(reduxData.mathGame.results),
+        fourChoicesData: filterData(reduxData.fourChoices.results),
       }));
     }
     if (dashboardState.mechanographyData) {
       setDashboardState((prevState) => ({
         ...prevState,
-        mechanographyData: filterData(reduxData.mathGame.results),
+        mechanographyData: filterData(reduxData.mechanography.results),
       }));
     }
     if (dashboardState.roscoData) {
       setDashboardState((prevState) => ({
         ...prevState,
-        roscoData: filterData(reduxData.mathGame.results),
+        roscoData: filterData(reduxData.roscoReduxState.results),
       }));
     }
     //eslint-disable-next-line
@@ -199,7 +218,7 @@ const useDashboard = () => {
     dashboardState,
     setDashboardState,
     mode,
-    t
+    t,
   };
 };
 
