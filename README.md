@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+# Game Suite App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Game Suite App! This application offers a collection of four engaging games to challenge and entertain users. Built with React, Vite, and TypeScript, this app provides a seamless and enjoyable gaming experience.
 
-Currently, two official plugins are available:
+## Games
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. MathGame
 
-## Expanding the ESLint configuration
+**Objective:** Calculate the highest number of random mathematical expressions within one minute.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![MathGame](./images/mathgame.png)
 
-- Configure the top-level `parserOptions` property like this:
+### 2. MechanographyGame
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+**Objective:** Type as many words as possible within one minute.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![MechanographyGame](./images/mechanographygame.png)
+
+### 3. Rosco
+
+**Objective:** Guess the correct word based on a given definition. There are as many definitions as letters in the alphabet.
+
+![Rosco](./images/rosco.png)
+
+### 4. FourChoices
+
+**Objective:** Choose the correct word from four options, matching the given definition.
+
+![FourChoices](./images/fourchoices.png)
+
+## Getting Started
+
+Follow these steps to run the Game Suite App locally:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/game-suite-app.git
