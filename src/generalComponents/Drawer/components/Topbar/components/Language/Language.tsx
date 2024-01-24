@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 import { ResponsiveDrawerStyles } from "../../../../styles/ResponsiveDrawer.styles";
 
 const Language = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   return (
     <FormControl sx={ResponsiveDrawerStyles().lenguageFormControl}>
